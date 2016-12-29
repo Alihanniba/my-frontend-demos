@@ -1,0 +1,30 @@
+extends ../layout
+
+block content
+	a(href='/cps/cp/txb/?cp=txb')
+		.cp
+			figure
+				img(src='/img/txb@2x.png', alt='兔小贝')
+				figcaption 兔小贝
+	a(href='/cps/cp/hc/?cp=hc')
+		.cp
+			figure
+				img(src='/img/huace@2x.png', alt='华策视频')
+				figcaption 华策视频
+	a(href='/cps/cp/cb/?cp=cb')
+		.cp
+			figure
+				img(src='/img/chinablue@2x.png', alt='中国蓝TV')
+				figcaption 中国蓝TV
+	a(href='/cps/cp/cb/?cp=youtube')
+		.cp
+			figure
+				img(src='/img/youtube.png', alt='youtube')
+				figcaption youtube
+block scripts
+	script
+		:uglify
+			$(document).ready(function() {
+				mobile.init();
+				mobile.cp();
+			});

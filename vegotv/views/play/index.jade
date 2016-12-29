@@ -1,0 +1,38 @@
+extends ../layout
+
+block content
+	.loading-box
+		.loading
+			.rect1
+			.rect2
+			.rect3
+			.rect4
+			.rect5
+	.play-selection.play-box
+		.loading-play
+			.load-playing
+				.rect1
+				.rect2
+				.rect3
+				.rect4
+				.rect5
+				p 努力加载中...
+		#youtube.video-container
+		.player
+			video#film(src='', controls='', x-webkit-airplay='true', webkit-playsinline)
+		.module
+			.qrcode.center
+				img(widht="230" height="230" src="http://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFR7zoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL05qcnpaVEhsNnVPVHVLTTB1aFlDAAIEcFEZWAMEAAAAAA==")
+				p 微信扫一扫
+		.pay-box
+			h1 本影片为付费影片
+			button 开通会员
+	main.play-selection
+	content.play-selection
+block scripts
+	script
+		:uglify
+			$(document).ready(function() {
+				mobile.init();
+				mobile.playPage();
+			});

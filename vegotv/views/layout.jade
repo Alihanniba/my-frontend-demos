@@ -1,0 +1,72 @@
+doctype html
+html(lang="ZH-CN")
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+		block title
+			title= 'Vego TV'
+		meta(name='description', content='#{site.desc}')
+		meta(name='keywords', content='#{site.keywords}')
+		meta(name='csrf-token', content='#{_csrf}')
+		meta(name='author', content='mashihua <mashihua@gochinatv.com>')
+		meta(name='apple-mobile-web-app-capable', content='yes')
+		meta(name='apple-mobile-web-app-status-bar-style', content='black')
+		meta(name="x5-fullscreen" content="true")
+		meta(name="full-screen" content="yes")
+		meta(name="format-detection" content="telephone=no")
+		meta(content="email=no" name="format-detection")
+		link(rel='apple-touch-icon', sizes='57x57', href='/icon/apple-icon-57x57.png')
+		link(rel='apple-touch-icon', sizes='60x60', href='/icon/apple-icon-60x60.png')
+		link(rel='apple-touch-icon', sizes='72x72', href='/icon/apple-icon-72x72.png')
+		link(rel='apple-touch-icon', sizes='76x76', href='/icon/apple-icon-76x76.png')
+		link(rel='apple-touch-icon', sizes='114x114', href='/icon/apple-icon-114x114.png')
+		link(rel='apple-touch-icon', sizes='120x120', href='/icon/apple-icon-120x120.png')
+		link(rel='apple-touch-icon', sizes='144x144', href='/icon/apple-icon-144x144.png')
+		link(rel='apple-touch-icon', sizes='152x152', href='/icon/apple-icon-152x152.png')
+		link(rel='apple-touch-icon', sizes='180x180', href='/icon/apple-icon-180x180.png')
+		link(rel='icon', type='image/png', sizes='192x192', href='/icon/android-icon-192x192.png')
+		link(rel='icon', type='image/png', sizes='32x32', href='/icon/favicon-32x32.png')
+		link(rel='icon', type='image/png', sizes='96x96', href='/icon/favicon-96x96.png')
+		link(rel='icon', type='image/png', sizes='16x16', href='/icon/favicon-16x16.png')
+		link(rel='manifest', href='/icon/manifest.json')
+		meta(name='msapplication-TileColor', content='#ffffff')
+		meta(name='msapplication-TileImage', content='/icon/ms-icon-144x144.png')
+		meta(name='theme-color', content='#ffffff')
+		link(rel="stylesheet" href="//cdn.bootcss.com/weui/1.0.0/style/weui.min.css")
+		block styles
+			link(rel="stylesheet" href="/css/swiper.min.css?v=#{sha}")
+			link(href='/css/index.css?v=#{sha}', rel='stylesheet')
+		//if lt IE 9
+			script(src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js")
+	body
+		block content
+			// pre= JSON.stringify(wecharConfig, null ,2)
+
+		//include footer
+
+		//common javascript here
+		block commonjs
+			- var _item = {debug: false, isWechat: isWechat, isMobile: isMobile, user: user || false, opened: site.opened, router: _routes}
+			script.
+				window['config'] = !{JSON.stringify(_item)}
+				console.log(window['config']);
+			script(src='/js/zepto.js?v=#{sha}')
+			script(src='/js/swiper.min.js?s=#{sha}')
+			//- script(src='//web.ottcloud.tv/common/js/falcor.min.js')
+			script(src='/js/build.js?s=#{sha}')
+			script(src='/js/wbuild.js?s=#{sha}')
+			script
+				:uglify
+					$(document).on('ajaxBeforeSend', function(e, xhr, options){
+						var csrf = $("meta[name='csrf-token']").attr('content')
+						if (csrf && options.type == "POST") {
+							xhr.setRequestHeader('X-CSRF-Token', csrf);
+						}
+					})
+		block wechat
+			if isWechat
+				// http://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421141115&token=&lang=zh_CN
+				script(src="//res.wx.qq.com/open/js/jweixin-1.0.0.js")
+				script(src="/js/wechat.js?s=#{sha}")
+		block scripts

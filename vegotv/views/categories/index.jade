@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+	.loading-box
+		.loading
+			.rect1
+			.rect2
+			.rect3
+			.rect4
+			.rect5
+	.classify
+
+block scripts
+	script
+		:uglify
+			$(document).ready(function(){
+				mobile.init();
+				mobile.classify();
+			})

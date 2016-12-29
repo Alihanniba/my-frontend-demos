@@ -1,0 +1,1511 @@
+/*************************************************
+ * Header模块
+ *************************************************/
+html {
+    font-family: Arial,'Microsoft YaHei', sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    position: relative;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    margin: 0;
+    min-height: 100%;
+    /*height: 100%;*/
+    width: 100%;
+    border: 0;
+    background: #fff;
+}
+
+th {
+    font-weight: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+}
+p{
+    margin: 0;
+    padding: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+@fontAwesomePath: '../fonts';
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('./../fonts/fontawesome-webfont.eot');
+    src: url('./../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('./../fonts/fontawesome-webfont.woff') format('woff'), url('./../fonts/fontawesome-webfont.ttf') format('truetype'), url('./../fonts/fontawesome-webfont.svg#FontAwesome') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header{
+    height: 60px;
+    width: 100%;
+    /*position: relative;*/
+    border-bottom: 1px solid #ccc;
+    display: inline-block;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+}
+
+header #web-logo{
+    height: 28px;
+    width: 68px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    margin-top: -14px;
+    margin-left: 0.56rem;
+
+}
+header div {
+    display: inline-block;
+    position: relative;
+    height: 60px;
+    width: 1.6rem;
+    float: right;
+    border-left: 1px solid #ccc;
+}
+header div img {
+    height: 28px;
+    width: 28px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -14px;
+    margin-left: -14px;
+}
+
+.loading-area {
+    position: fixed;
+    width: 100px;
+    height: 60px;
+    background-image: url(./../images/loading.gif);
+    background-color: rgba(0, 0, 0, 0.66);
+    background-size: auto 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    border-radius: 10px;
+    /*display: none;*/
+    -webkit-transform: translateY(-85px);
+    -ms-transform: translateY(-85px);
+    -o-transform: translateY(-85px);
+    transform: translateY(-85px);
+    left: -50px;
+    margin-left: 50%;
+    z-index: 9999;
+}
+
+footer {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    padding-bottom: 25px;
+    position: absolute;
+    bottom: 0;
+}
+.footer-declaration {
+    height: 11px;
+    width: 100%;
+    text-align: center;
+    line-height: 11px;
+    font-size: 11px;
+    color: #999;
+}
+.footer-declaration-one {
+    margin: 55px 0 8px 0;
+}
+
+.guide-nav {
+    display: none;
+    width: 4rem;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    height: 100%;
+    right: -150px;
+    background: #fff;
+
+}
+
+.guide-nav ul li {
+    list-style: none;
+    border: none;
+}
+
+.guide-nav ul {
+    position: absolute;
+    width: 100%;
+    top: 2.266666666666667rem;
+    bottom: 78px;
+    overflow-y: auto;
+}
+
+.body-shadow {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(51,51,51,.79);
+    z-index:4;
+}
+
+.username {
+    height: 2.266666666666667rem;
+    width: 100%;
+    background: #e9e9e9;
+    position: relative;
+}
+
+.username p {
+    display: inline-block;
+    font-size: 0.3466666666666667rem;
+    line-height: 0.4966666666666667rem;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    color: #6799ff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.username p span{font-weight: bold;}
+.guide-nav ul,
+.layout {
+    margin-top: 0.3466666666666667rem;
+    font-size: 15px;
+    color: #666;
+    text-align: center;
+}
+
+.guide-nav li,
+.layout {
+    height: 1.2rem;
+    line-height: 1.2rem;
+    width: 100%;
+    z-index: 101;
+    font-size: .4rem;
+}
+
+.guide-nav li:hover,
+.layout:hover {
+    background: #e9e9e9;
+}
+
+.nav-li-background {
+    background: #e9e9e9;
+}
+
+.backstage-index:before,
+.message-list:before,
+.finance-center:before,
+.personal-center:before,
+.notice-center:before,
+.help-center:before,
+.layout {
+    font-family: FontAwesome;
+    font-size: .35rem;
+    color: #999;
+    margin-right: .44rem;
+}
+
+.backstage-index:before {
+    content: "\f015";
+}
+
+.message-list:before {
+    content: "\f0ca";
+}
+
+.finance-center:before {
+    content: "\f157";
+}
+
+.personal-center:before {
+    content: "\f007";
+}
+
+.notice-center:before {
+    content: "\f0f3";
+}
+
+.help-center:before {
+    content: "\f059";
+}
+.layout:after {
+    content: "\f08b";
+    margin-right: 0;
+    margin-left: .44rem;
+}
+.layout {
+    position: absolute;
+    bottom: 22px;
+}
+
+
+
+
+
+
+/************************************************************
+ *      登陆注册
+ ************************************************************/
+#login-container{
+    height: 454px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -227px;
+}
+
+.login-logo{
+    display: inline-block;
+    height: 51px;
+    width: 51px;
+    left: 50%;
+    margin-left: -25.5px;
+    position: relative;
+}
+.login-logo img{
+    height: 100%;
+    width: 100%;
+}
+.login-logo span{
+    height: 23px;
+    width: 47.5px;
+    position: absolute;
+    top: 14px;
+    right: -53px;
+    font-size: 14px;
+    color: #6799ff;
+    background: #fff;
+    text-align: center;
+    line-height: 23px;
+    border-radius: 4px;
+}
+#index-login{
+    /*display: none;*/
+
+}
+.loginRegister{
+    width: 82.54%;
+    max-width: 310px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: #fff;
+    margin-top: 36px;
+    font-family: Arial,'Microsoft YaHei', sans-serif;
+    padding-bottom: 30px;
+    /*margin-bottom: 500px;*/
+}
+.loginRegister .switch{
+    height: 50px;
+    width: 100%;
+    box-shadow: 0 0 5px #6799ff;
+    display: inline-block;
+
+}
+.loginRegister .switch .two_button{
+    height: 32px;
+    width: 33%;
+    /*border: 1px solid red;*/
+    position: relative;
+    margin: 0 auto;
+    margin-top: 14px;
+}
+.loginRegister .switch .two_button div{
+    font-size: 17px;
+    font-weight: bold;
+    color: #999;
+    height: 26px;
+    position: absolute;
+}
+.active{
+    color: #6799ff!important;
+    border-bottom: 2px solid #6799ff;
+}
+.loginRegister .switch .two_button div:nth-child(1){
+    left: 0;
+    text-align: left;
+}
+.loginRegister .switch .two_button div:nth-child(2){
+    right: 0;
+    text-align: right;
+}
+.loginRegister .content{
+    /*border:1px solid red;*/
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 19px;
+}
+.loginRegister .content .index-form-input{
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+    position: relative;
+}
+.loginRegister .content .index-form-input input{
+    height: 100%;
+    width: 100%;
+    color: #999;
+    font-size: 16px;
+    line-height: 100%;
+    text-indent: 10px;
+    border: none;
+    outline: none;
+}
+.index-form-forget{
+    height: 14px;
+    font-size: 14px;
+    line-height: 14px;
+    color: #ccc;
+    margin: 21px 0 7.5px 0;
+    text-align: center;
+}
+.index-form-submit{
+    height: 30px;
+    width: 100%;
+    border: 1px solid #6799ff;
+    color: #6799ff;
+    line-height: 30px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+#register-button{
+    margin-top: 20px;
+}
+#get-register-code,
+#find-get-code-button{
+    position: absolute;
+    top: 12px;
+    right: 0;
+    width: 40%;
+    background: #e9e9e9;
+    color: #999;
+    height: 26px;
+    line-height: 26px;
+    font-size: 13px;
+    border-radius: 2px;
+    text-align: center;
+    border: none;
+    outline: none;
+
+}
+#index-register{
+    display: none;
+}
+.index-find-password-container{
+    display: none;
+}
+.index-find-password-container .title{
+    height: 50px;
+    width: 100%;
+    box-shadow: 0 0 5px #6799ff;
+    color: #6799ff;
+    text-align: center;
+    line-height: 50px;
+    color: 15px;
+    font-weight: bold;
+}
+.index-find-password-container #find-step1-button{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.index-find-password-container #exit-step1-button{
+    background: #e7e7e7;
+    color: #999;
+    border: none;
+}
+#auto_login{
+    height: 16px;
+    line-height: 16px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    color: #fff;
+    display: none;
+}
+
+
+
+
+/************************************************************
+ *      首页
+ ************************************************************/
+
+#user_portrayal_report {
+    display: inline-block;
+    width: 100%;
+    padding-top: 60px;
+}
+#finance-data-report{
+    background-color: #fcfcfc;
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+#finance-data-show {
+    margin: 1rem 0 .866666rem 0;
+    height: 1rem;
+    width: 100%;
+    position: relative;
+    text-align : center;
+}
+#finance-data-show div {
+    display: inline-block;
+}
+#yesterday-income,#total-income {
+    width: 5rem;
+    height: 1rem;
+    position: absolute;
+    top: 0;
+    text-align: center;
+}
+#yesterday-income p:nth-child(1),
+#total-income p:nth-child(1) {
+    font-size: 0.34666rem;
+    height: 0.34666rem;
+    line-height: 0.34666rem;
+    color: #999;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+#yesterday-income p:nth-child(2),
+#total-income p:nth-child(2) {
+    font-size: 0.4533333rem;
+    height: 0.4533333rem;
+    line-height: 0.4533333rem;
+    margin-top: 16px;
+    color: #333;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+#yesterday-income {
+    left: 0;
+}
+#partition-line {
+    position: absolute;
+    left: 50%;
+    margin-left: -0.5px;
+    width: 1px;
+    height: 1rem;
+    background: #ccc;
+    margin: 0 auto;
+}
+#total-income {
+    right: 0;
+}
+
+#show_title,#finance-data-header {
+    height: .4533333rem;
+    line-height: .4533333rem;
+    width: 100%;
+    color: #333;
+    font-size: .4533333rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 24.5px;
+    margin-bottom: 9.5px;
+}
+#finance-data-header{ margin-top: 0.66666rem; }
+#date_select{
+    height: 25px;
+    width: 1.2rem;
+    margin: 0 auto;
+    margin-top: 10px;
+    position: relative;
+}
+
+#date_select p{
+    position: absolute;
+    height: 25px;
+    width: 1.1466666667rem;
+    font-size: 14px;
+    line-height: 25px;
+    text-align: center;
+    color: #999;
+    border-radius: 10px;
+    border: 1px solid #e7e7e7;
+}
+#profile_yesterday{
+    top: 0;
+    left: -1.33333333333rem;
+}
+#profile_month{
+    top: 0;
+    right: -1.33333333333rem;
+}
+#date_select p:nth-child(3){
+    margin-right: 0;
+}
+
+#date_select .diff_date{
+    background: #e7e7e7;
+}
+
+.cut-apart-line {
+    height: 10px;
+    width: 100%;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    margin: 32px 0 25px;
+}
+
+#yesterday_data_report{
+    height: auto;
+    color: #999;
+    background-color: #fcfcfc;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+#data_report_nav{
+    margin-top: .666666rem;
+    font-size: .4533333rem;
+    line-height: .4533333rem;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+#data_report_info{
+    margin: .946666rem 0 .8933333rem 0;
+    text-align: center;
+}
+#data_report_info .line{
+    width: 84%;
+    height: .3466666rem;
+    line-height: .3466666rem;
+    margin: 0 auto;
+    font-size: 14px;
+    clear: both;
+}
+#data_report_info .line:nth-child(1),#data_report_info .line:nth-child(2){margin-bottom: .333333rem;}
+#data_report_info .font-1,#data_report_info .progress_ful {float: left;}
+#data_report_info .font-1{
+    font-size: 14px;
+    color: #999;
+}
+#data_report_info .progress_ful {
+    display: box;
+    display: -moz-inline-box;
+    display: -webkit-inline-box;
+    margin-left: 21px;
+    position: relative;
+    width: 58.692185%;
+    height: .26666666rem;
+    background-color: #e9e9e9;
+    border-radius: 20px;
+    margin-top: 2px;
+}
+#acceptbar_act {
+    background-color: #ffcd99;
+}
+#clickbar_act {
+    background-color: #cb9aff;
+}
+#turnratebar_act {
+    background-color: #98ceff;
+}
+#acceptbar_act, #clickbar_act, #turnratebar_act {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    border-radius: 20px;
+}
+#search_by_date{
+    width: 100%;
+    height: 37px;
+    background-color: #fcfcfc;
+}
+#search_by_date .search_con{
+    height: 35px;
+    width: 9.2rem;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: relative;
+    background-color: #fff;
+}
+#date_set{
+    width: 8.26666666667rem;
+    height: 35px;
+    font-size: 15px;
+    border-right: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 4px 0 0 4px;
+}
+#date_set .chioce_time{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    height: 15px;
+    width: 45%;
+    line-height: 15px;
+    font-size: 15px;
+    margin-top: 10px;
+    position: relative;
+}
+#date_set .chioce_time input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    line-height: 15px;
+    background: #fff;
+    text-indent: 10px;
+    outline: none;
+    font-size: 15px;
+    color: #999;
+}
+#start_time_input::-webkit-input-placeholder{
+    color: #ccc;
+}
+
+#search_data:before{
+    content: "\f002";
+    font-family: FontAwesome;
+    font-size: 15px;
+    color: #6799ff;
+    position: absolute;
+    right: 0.2666666667rem;
+    top: 10px;
+}
+#data_by_user{
+    width: 100%;
+    padding: 0 3%;
+    padding-top: 30px;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    background-color: #fcfcfc;
+}
+
+
+#data_by_user .column {
+    width: 100%;
+    height: 100%;
+    /*float:left;*/
+}
+
+#data_by_user .column .pie_style {
+    width: 100%;
+}
+
+#data_by_user .column #providerChart,
+#data_by_user .column #networkChart,
+#data_by_user .column #systemChart,
+#data_by_user .column #sexChart,
+#data_by_user .column #ageChart,
+#data_by_user .column #hobbyChart,
+#data_by_user .column #incomeChart,
+#data_by_user .column #marryChart,
+#data_by_user .column #shopChart{
+    float: left;
+    height: 189px;
+    text-align: center;
+    /*background:url(./../images/empty.jpg)no-repeat;*/
+}
+
+/****************************************************
+ *  广告列表页面
+ *****************************************************/
+
+.messages-list-module {
+    display: inline-block;
+    padding: 60px 0 160px;
+    width: 100%;
+    height: 100%;
+}
+.messages-list-module .messages-list-header {
+    height: 17px;
+    width: 100%;
+    line-height: 17px;
+    font-size: 17px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    margin-top: 16px;
+}
+.messages-list-module .messages-choose-button {
+    height: 25px;
+    width: 2.6666666667rem;
+    margin: 0 auto;
+    margin-top: 7.5px;
+}
+.messages-list-module .messages-choose-button button {
+    height: 25px;
+    width: 1.2rem;
+    outline: none;
+    border: 1px solid #e7e7e7;
+    color: #999;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 14px;
+    display: inline-block;
+    background: none;
+}
+
+.select-button {
+    background: #e7e7e7!important;
+}
+
+.messages-list-module .messages-choose-status {
+    float: right;
+}
+.messages-list-module .messages-choose-time {
+    float: left;
+}
+.messages-list-module .messages-search-input {
+    width: 9.333333333333333rem;
+    height: 37px;
+    margin: 0 auto;
+    margin-top: 15px;
+    line-height: 37px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: relative;
+}
+.messages-list-module .messages-search-input input {
+    height: 37px;
+    width: 8.266666666666667rem;
+    text-indent: 0.45rem;
+    font-size: 15px;
+    color: #999;
+    outline: none;
+    border: none;
+    background: none;
+    float: left;
+    background-color: #fff;
+    border-radius: 4px;
+}
+.messages-list-module .messages-search-input span {
+    height: 37px;
+    width: 1.053333333333333rem;
+    border-left: 1px solid #ccc;
+    font-size: 15px;
+    color: #6799ff;
+    float: right;
+    background-color: #fff;
+    border-radius: 0 4px 4px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+}
+.messages-list-module .messages-search-input span:before {
+    content: "\f002";
+    font-family: FontAwesome;
+}
+#messages-contains {
+    width: 9.333333333rem;
+    margin: 0 auto;
+    margin-top: 7.5px;
+    border-radius: 4px;
+}
+#messages-contains .messages_empty{
+    text-align: center;
+    color: #666;
+    padding-top: 30px;
+    font-size: 20px;
+}
+#messages-contains ul {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: #fff;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+#messages-contains li:nth-child(1) {
+    border-top: none;
+    list-style: none;
+}
+#messages-contains li {
+    height: 80px;
+    width: 100%;
+    position: relative;
+    border-top: 1px solid #ccc;
+}
+
+#messages-contains li:hover {
+    background: #e9e9e9;
+}
+
+#messages-contains .messages-basic-info {
+    position: absolute;
+    height: 42px;
+    width: 5.3333333rem;
+    top: 19px;
+    left: 0.5066666667rem;
+}
+#messages-contains .messages-basic-info .messages-name {
+    height: 17px;
+    line-height: 17px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    font-size: 17px;
+    color: #999;
+}
+#messages-contains .messages-basic-info p:nth-child(2) {
+    height: 15px;
+    line-height: 15px;
+    font-size: 15px;
+    color: #999;
+    margin-top: 7.5px;
+}
+#messages-contains .messages-basic-info .messages-time {
+    line-height: 15px;
+    margin-right: 37.5px;
+    font-size: 15px;
+}
+#messages-contains .messages-basic-info .messages-type,
+#messages-contains .messages-basic-info .messages-type:before {
+    display: inline-block;
+    content: "\f179";
+    font-family: FontAwesome;
+    color: #999;
+    height: 14px;
+    line-height: 14px;
+    font-size: 14px;
+}
+#messages-contains .messages-status-info {
+    display: inline-block;
+    height: 24px;
+    width: 2.4rem;
+    line-height: 24px;
+    right: 10px;
+    position: absolute;
+    top: 30px;
+}
+#messages-contains .messages-status-info .messages-status {
+    display: inline-block;
+    text-align: center;
+    height: 24px;
+    width: 60px;
+    background: #e7e7e7;
+    line-height: 24px;
+    font-size: 14px;
+    color: #999;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+#messages-contains .messages-status-info span:nth-child(2) {
+    height: 14px;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#messages-contains .messages-status-info span:nth-child(2):before {
+    display: inline-block;
+    content: "\f105";
+    font-family: FontAwesome;
+    color: #999;
+    line-height: 14px;
+    font-size: 14px;
+}
+.get-more {
+    height: 30px;
+    width: 6.5866666666667rem;
+    display: block;
+    border: 1px solid #6799ff;
+    font-size: 15px;
+    color: #6799ff;
+    background: none;
+    margin: 34px auto 37.5px;
+    outline: none;
+}
+
+/**
+ *   详情页面
+ */
+.message-one-module {
+    display: inline-block;
+    padding: 60px 0 160px;
+    width: 100%;
+    height: 100%;
+    background-color: #fcfcfc;
+}
+
+.message-basic-info {
+    width: 9.333333333rem;
+    margin: 25px auto 34px;
+    font-size: 15px;
+    line-height: 15px;
+    color: #999;
+}
+
+.message-basic-info p {
+    margin-top: 16px;
+}
+
+.message-details {
+    font-size: 17px;
+    line-height: 17px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.24rem;
+    margin-top: 0;
+}
+
+.message-name span:nth-child(2) {
+    display: inline-block;
+    border-radius: 10px;
+    margin-left: 0.48rem;
+    width: 1.6rem;
+    height: 0.61333333rem;
+    line-height: 0.61333333rem;
+    text-align: center;
+    background: #e7e7e7;
+    color: #999;
+}
+
+.message-push-content span {
+    display: inline-block;
+    width: 5.146666666667rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+
+#go-into-push-content {
+    display: inline-block;
+    color: #6799ff;
+    height: 0.5333333333rem;
+    line-height: 0.5333333333rem;
+    width: 1.7066666667rem;
+    border: 1px solid #6799ff;
+    margin-left: 0.1rem;
+    font-size: 0.3466666666667rem;
+    text-align: center;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+}
+
+.message-basic-KPI {
+    display: inline-block;
+    width: 100%;
+    padding: 0.93333333333rem 0;
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.message-basic-KPI > p {
+    width: 100%;
+    height: 17px;
+    line-height: 17px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.message-statistics-data {
+    margin-top: 0.93333333333rem;
+}
+
+.message-statistics-data div {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    height: 0.93333333333rem;
+    text-align: center;
+}
+
+.KPI-key {
+    height: 0.291005291rem;
+    line-height: 0.291005291rem;
+    font-size: 0.291005291rem;
+    color: #999;
+}
+
+.KPI-value {
+    height: 20px;
+    line-height: 20px;
+    font-size: 20px;
+    color: #666;
+    margin-top: 6px;
+}
+
+.message-browse-time,
+.message-conversion-rate {
+    margin-top: 0.58666666666667rem;
+}
+
+.user-draw-report {
+    width: 100%;
+    display: inline-block;
+    padding: .666666rem 0 .9466666rem 0;
+    border-top: 1px solid #ccc;
+    background-color: #fcfcfc;
+}
+
+.show-title-guide {
+    width: 100%;
+    height: .453333rem;
+    line-height: .453333rem;
+    font-size: .453333rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+/***********************************************************
+ *         个人中心
+ ***********************************************************/
+.personal-center-module {
+    display: inline-block;
+    padding-top: 60px;
+    width: 100%;
+    height: 100%;
+}
+
+.personal-center-head {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    height: 60px;
+    width: 100%;
+    line-height: 17px;
+    font-size: 17px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    padding: 25px 0 17.5px;
+    background-color: #fcfcfc;
+}
+
+.personal-infor-setting {
+    display: inline-block;
+    width: 100%;
+}
+
+.personal-info-guide {
+    height: 48px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    background-color: #fcfcfc;
+}
+
+.personal-info-guide div {
+    height: 48px;
+    font-size: 16px;
+    line-height: 48px;
+    color: #999;
+    width: 3rem;
+    display: inline-block;
+    position: absolute;
+    top: -2px;
+    text-align: center;
+}
+
+.personal-info-guide div.setting-select {
+    color: #6799ff;
+    border-bottom: 3px solid #6799ff;
+}
+
+.basic-setting-guide {
+    left: 1.2rem;
+}
+
+.safe-setting-guide {
+    right: 1.2rem;
+}
+
+.basic-info-setting,
+.safe-info-setting {
+    width: 9.3066666666667rem;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 65px;
+}
+
+.basic-info-setting {
+    /*display: none;*/
+}
+
+.safe-info-setting {
+    display: none;
+}
+
+.mobile-phone {
+    height: 25px;
+    width: 100%;
+    font-size: 15px;
+    line-height: 15px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.mobile-phone p{
+    display: inline;
+    height: 25px;
+    line-height: 25px;
+    margin-left: 18px;
+}
+
+.mobile-phone span {
+    display: inline-block;
+    height: 23px;
+    line-height: 23px;
+    width: 2.16rem;
+    border: 1px solid #6799ff;
+    color: #6799ff;
+    font-size: 13px;
+    border-radius: 4px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.basic-info-one,
+.safe-info-one {
+    width: 100%;
+    height: 60px;
+    margin-top: 20px;
+    font-size: 15px;
+    color: #666;
+}
+
+.basic-info-one p,
+.safe-info-one p {
+    height: 15px;
+    line-height: 15px;
+}
+.basic-info-one input,
+.safe-info-one input {
+    height: 38px;
+    width: 9.28rem;
+    line-height: 38px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 7px;
+    text-indent: 15px;
+    font-size: 14px;
+    outline: none;
+    background-color: #fcfcfc;
+}
+
+.save-setting {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #6799ff;
+    color: #fff;
+    font-size: 19px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.forget-password {
+    color: #666;
+    text-align: center;
+    height: 15px;
+    font-size: 15px;
+    line-height: 15px;
+    width: 100%;
+    display: none;
+    position: absolute;
+    bottom: 70px
+}
+
+/*@media screen and (max-width: 500px) {
+    .safe-setting-save {
+        position: fixed;
+        bottom: 0;
+    }
+    .forget-password {
+        position: fixed;
+        bottom: 70px;
+    }
+}*/
+
+/*@media screen and (min-width: 500px) {
+    .personal-info-guide div.setting-select {
+        border-bottom: 7px solid #6799ff;
+    }
+    .personal-info-guide div {
+        top: -7px;
+    }
+}*/
+
+.modify-phone-module,
+.notice-center-module {
+    height: 228px;
+    width: 311px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -114px;
+    margin-left: -155.5px;
+    z-index: 5;
+    background: #fff;
+    border-radius: 10px;
+    display: none;
+}
+
+.modify-phone-module > p ,
+.notice-center-module > p{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #6799ff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modify-phone-content {
+    padding: 8px 0 25px;
+    width: 248px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.modify-phone-content button {
+    position: absolute;
+    height: 26px;
+    width: 85px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 13px;
+    color: #999;
+    background: #e7e7e7;
+    border-radius: 3px;
+    bottom: 35px;
+    right: 6px;
+    border:none;
+}
+
+.modify-phone-content input {
+    display: block;
+    width: 100%;
+    height: 48px;
+    margin-top: 3px;
+    border: none;
+    border-bottom: 1px solid #e7e7e7;
+    outline: none;
+    font-size: 16px;
+    color: #999;
+    text-indent: 8px;
+}
+
+.enter-cancel-modify,
+.enter-empty-message {
+    height: 40px;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: 1px solid #e7e7e7;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 40px;
+    background: #fff;
+    position: relative;
+}
+
+.enter-cancel-modify div,
+.enter-empty-message div {
+    height: 100%;
+    width: 156px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+}
+
+.cancel-modify ,
+.cancel-message{
+    border-bottom-left-radius: 10px;
+    color: #999;
+    border-right: 1px solid #e7e7e7;
+    left: 0;
+}
+
+.enter-modify,
+.empty-message {
+    right: 0;
+    border-bottom-right-radius: 10px;
+    color: #6799ff;
+}
+
+
+/************************************************************
+ *   财务中心
+ *************************************************************/
+
+.finance-center-module {
+    display: inline-block;
+    padding: 60px 0 160px;
+    width: 100%;
+    height: 100%;
+}
+
+.finance-bill-list {
+    width: 9.5466666666667rem;
+    margin: 0 auto;
+}
+
+.finance-bill-list > p {
+    height: 17px;
+    line-height: 17px;
+    font-size: 17px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+.bill-list-detail {
+    width: 100%;
+    margin: 32px 0;
+}
+
+.bill-list-detail li {
+    display: inline-block;
+    float: left;
+}
+
+.bill-list-params {
+    height: 14px;
+    margin-bottom: 6px;
+}
+
+.bill-list-params li {
+    height: 14px;
+    line-height: 14px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.bill-list-value {
+    height: 27px;
+    line-height: 27px;
+}
+
+.bill-list-value li {
+    height: 27px;
+    line-height: 27px;
+    font-size: 12px;
+    color: #666;
+}
+
+.trade-id {
+    width: 2.4rem;
+}
+
+.trade-time {
+    width: 2.4rem;
+}
+
+.trade-detail {
+    width: 1.2rem;
+}
+
+.trade-status {
+    width: 1.2rem;
+}
+
+.trade-num {
+    width: 2.3466666666667rem;
+    text-align: right;
+}
+
+
+
+/******************************************************
+ * 消息中心
+ *******************************************************/
+
+.notice-center-module {
+    /*display: block;*/
+    height: 363px;
+    margin-top: -181.5px;
+}
+
+.notice-center-content {
+    padding-bottom: 25px;
+    height: 247px;
+    width: 287px;
+    margin: 0 auto;
+    overflow-y: scroll;
+}
+
+.notice-center-content div {
+    padding: 18px 0;
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.notice-center-content div p{
+    margin-top: 9px;
+}
+
+.notice-center-content div p:nth-child(1){
+    margin-top: 0;
+}
+
+.notice-message-time {
+    height: 12px;
+    line-height: 12px;
+    width: 100%;
+    font-size: 12px;
+}
+
+.success-notice-message .notice-message-time {
+    color: #999;
+}
+
+.notice-message-detail,
+.notice-message-why  {
+    height: 16px;
+    line-height: 16px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.success-notice-message .notice-message-detail {
+    color: #666;
+}
+
+.failure-notice-message {
+    color: #ff6666;
+}
+
+
+.enter-empty-message {
+
+}
+
+

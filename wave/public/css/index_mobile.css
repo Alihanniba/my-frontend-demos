@@ -1,0 +1,156 @@
+html {
+	font-family:"Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif !important;
+	width: 100%;
+	height: 100%;
+	font-size: 37.5px;
+	color: #000;
+}
+
+body {font-size: 0.35rem;background: #fff;}
+
+img {vertical-align: middle;}
+a {color: #000;}
+a:hover {text-decoration: none;}
+h1 {
+	font-size: 0.43rem;
+	line-height: 2;
+	text-align: center;
+}
+p {
+	font-size: 0.35rem;
+	line-height: 1.5;
+}
+
+.header {
+	font-size: 0;
+	padding: 0.1rem 0;
+}
+.logo {
+	width: 1rem;
+	vertical-align: middle;
+	margin-left: 0.5rem;
+}
+.nav {
+	width: 8rem;
+	text-align: right;
+}
+.nav>a {
+	font-size: 0.4rem;
+	padding: 0 0 0 1em;
+	vertical-align: middle;
+}
+.nav-active {
+	color: #6799ff;
+}
+
+.banner-link {
+	display: block;
+	position: relative;
+}
+.abs_img {
+	position: absolute;
+	width: 6rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
+
+.index-introduce {
+	text-align: center;
+	padding: 1rem;
+	color: #666666;
+}
+.index-introduce .title {
+	font-size: 0.43rem;
+	font-weight: bold;
+	line-height: 2;
+}
+.button-backstage {
+	width: 5rem;
+	color: #6799ff;
+	line-height: 2;
+	border: 1px solid #6799ff;
+	border-radius: 0.5rem;
+	margin: 0.5rem auto 0;
+	display: block;
+}
+
+.index-scenes {
+	text-align: center;
+	background: #f5f5f5;
+	color: #666666;
+}
+.scene-title {
+	font-weight: bold;
+	padding: 0.35rem 0 0 0;
+}
+.scene-box {
+	border-top: 1px solid #cccccc;
+	padding: 0.35rem 0;
+}
+.no-border {
+	border: none;
+}
+.scene-img {
+	position: relative;
+	width: 6rem;
+	margin: 0 auto;
+}
+.scene-img>.title {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	font-size: 0.4rem;
+	font-weight: bold;
+	color: #fff;
+	width: 80%;
+}
+.scene-img>.mask {
+	background: #000;
+	opacity: 0.4;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+.keypoint {
+	padding: 0.35rem 0 0 0;
+}
+
+footer {
+	text-align: center;
+}
+.index-contact {
+	background: #2d3236;
+	color: #d3d3d3;
+	padding: 0.7rem 0;
+}
+.index-contact>p {
+	line-height: 2;
+}
+.index-copyright {
+	background: #23282c;
+	color: #cccccc;
+	padding: 0.35rem 0;
+	font-size: 0.3rem;
+}
+.footer-logo {
+	margin: 0 auto;
+}
+
+/**about**/
+.index-about {
+	text-align: justify;
+	background: #f5f5f5;
+	color: #666666;
+	padding: 0.5rem 0.5rem;
+}
+.index-about>p {
+	text-indent: 2em;
+	font-size: 0.4rem;
+	line-height: 1.8;
+}

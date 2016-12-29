@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="113px" height="43px" viewBox="0 0 113 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: sketchtool 3.4.4 (395) - http://www.bohemiancoding.com/sketch -->
+    <title>title-result-get</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="结果-中奖-4" sketch:type="MSArtboardGroup" transform="translate(-132.000000, -119.000000)" font-weight="normal" font-family="MF LiHei (Noncommercial)" line-spacing="48" sketch:alignment="middle" font-size="36">
+            <g id="result" sketch:type="MSLayerGroup" transform="translate(35.000000, 112.000000)">
+                <g id="title-result-get" transform="translate(99.000000, 0.000000)" sketch:type="MSTextLayer">
+                    <g id="恭喜您获得">
+                        <text id="中奖啦" stroke="#9E3A1F" stroke-width="10" fill="#FCFDFC">
+                            <tspan x="0" y="32">中奖啦</tspan>
+                        </text>
+                        <text id="中奖啦" fill="#FFF6B3">
+                            <tspan x="0" y="32">中奖啦</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

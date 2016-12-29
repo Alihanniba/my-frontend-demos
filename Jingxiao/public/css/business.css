@@ -1,0 +1,595 @@
+html{
+    width: 100%;
+    height: 100%;
+    font-family: "Ping Hei","冬青黑体","Hiragino Sans GB","Hiragino Sans GB W3","微软雅黑";
+}
+.clear-fix:after {
+    content: '\20';
+    display: block;
+    height: 0;
+    clear: both;
+}
+button:focus{
+    outline: none;
+}
+
+/*--------------------------------------------------------------------------------
+    商户版页眉
+--------------------------------------------------------------------------------*/
+.business-header{
+    height: 72px;
+    background-color: #fff;
+}
+#guo-logo{
+    height: 72px;
+    width: 100px;
+    line-height: 72px;
+    font-size: 32px;
+    float: left;
+    margin-left: 50px;
+    display: block;
+}
+.header-logo{
+    float: left;
+    width: 114px;
+    margin-top: 23px;
+    margin-left: 64px;
+    display: inline-block;
+}
+.business-header .header-left-text{
+    float: left;
+    margin-left: 21px;
+    font-size: 20px;
+    color: #999;
+    line-height: 72px;
+}
+
+.business-header .header-right-text.active,
+.business-header .header-right-account.active{
+    background-color: #f0eff5;
+}
+.business-header .header-right-account{
+    float: right;
+    font-size: 16px;
+    line-height: 100%;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+    height: 52px;
+    padding-top: 20px;
+}
+.business-header .header-right-account .tel{
+    margin-top: 3px;
+    font-size: 11px;
+    color: #999;
+}
+
+/*--------------------------------------------------------------------------------
+    商户版首页
+--------------------------------------------------------------------------------*/
+
+.index-body{
+    width: 100%;
+    /*min-height: 800px;*/
+    min-width: 800px;
+    /*background-image: url(../images/bg.jpg);*/
+    /*-webkit-background-size: cover;*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    background-color: #d0e0e3;
+}
+.index-container .switch{
+    height: 50px;
+    border-bottom: 2px #e0e0e0 solid;
+    text-align: center;
+}
+.index-container .switch div{
+    width: 120px;
+    height: 100%;
+    display: inline-block;
+    line-height: 52px;
+    cursor: pointer;
+    margin: 0 15px;
+    font-size: 18px;
+    position: relative;
+    top: -2px;
+}
+.index-container .switch div.active{
+    border-bottom: 4px #4a90e2 solid;
+    color: #4a90e2;
+}
+.index-container .title{
+    height: 50px;
+    border-bottom: 2px #e0e0e0 solid;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    position: relative;
+}
+.index-container{
+    height: 382px;
+    width: 480px;
+    margin: 89px auto 0;
+    background-color: #fff;
+    border-radius: 4px;
+}
+.index-container .content{
+    height: 330px;
+}
+.index-register-container,
+.index-register-container .tips{
+    display: none;
+}
+.index-form-input{
+    text-align: center;
+    position: relative;
+}
+.index-form-input input{
+    border: 1px #e0e0e0 solid;
+    background-color: #f6f6f6;
+    border-radius: 4px;
+    outline: none;
+    width: 318px;
+    height: 42px;
+    font-size: 15px;
+    padding: 0 20px;
+}
+#index-error,
+#reg-error,
+#find-error-1,
+#find-error-2{
+    display: none;
+    color: #f66f7f;
+    font-size: 15px;
+    margin-top: 15px;
+    text-align: center;
+}
+#login-phone{
+    margin-top: 60px;
+}
+#login-password{
+    margin-top: 20px;
+}
+#register-phone{
+    margin-top: 47px;
+}
+#register-password{
+    margin-top: 20px;
+}
+.register-verfication{
+    margin-top: 20px;
+}
+.index-form-forget{
+    position: relative;
+    left: 345px;
+    color: #ccc;
+    text-decoration: underline;
+    font-size: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.index-form-submit{
+    background-color: #4a90e2;
+    border-radius: 4px;
+    width: 360px;
+    height: 44px;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    line-height: 44px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.index-form-submit-on-progress{
+    background-color: rgb(54, 101, 155);
+}
+#login-button{
+    margin-top: 30px;
+}
+#register-button{
+    margin-top: 20px;
+}
+.verify-code-button{
+    position: absolute;
+    right: 66px;
+    top: 26px;
+    width: 80px;
+    height: 32px;
+    background-color: #f6f6f6;
+    font-size: 15px;
+    color: #4a90e2;
+    border-radius: 2px;
+    border: 1px solid #4a90e2;
+}
+.index-find-password-container{
+    display: none;
+}
+.index-find-password-container .step1{
+
+}
+.index-find-password-container .step2,
+.index-find-password-container .tips{
+    display: none;
+}
+#find-phone{
+    margin-top: 79px;
+}
+#find-verfication{
+    margin-top: 20px;
+}
+#find-step1-button,
+#find-step2-button{
+    margin-top: 20px;
+}
+#find-password{
+    margin-top: 79px;
+}
+#find-confirm-password{
+    margin-top: 20px;
+}
+.index-container .tips .content-main{
+    margin-top: 126px;
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+}
+.index-container .tips .content-subtitle{
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: center;
+    color: #ccc;
+}
+.close-button{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/btn-close.png);
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+/*--------------------------------------------------------------------------------
+    经销版选择等级页面
+--------------------------------------------------------------------------------*/
+.list-container{
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.chio-area{
+    height: 100px;
+    width: 800px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.chio-area select{
+    border:1px #993300 solid;
+    background:#FFFFFF;
+    width: 200px;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+.chio-level{
+    height: 50px;
+    width: 800px;
+    margin: 0 auto;
+    background: #999;
+    color:#fff;
+    font-size: 24px;
+    line-height: 50px;
+    text-indent: 20px;
+}
+
+.enter-area{
+    background: #fff;
+    height: 150px;
+}
+.enter-area button{
+    height: 50px;
+    width: 100px;
+    border-radius: 4px;
+    outline: none;
+    border:none;
+    float: right;
+    margin: 50px 50px 50px 0;
+    cursor: pointer;
+
+}
+.enter-area button:hover{
+    background: #43A747;
+}
+.your-area-pay{
+    background: #333;
+}
+/*#area-enjoyplay{
+    height: 300px;
+}*/
+.final-area{
+    margin:0;
+    height: 50px;
+    float: left;
+    font-size: 30px;
+    line-height: 50px;
+    padding: 0 20px;
+}
+#first-area{
+    margin:0 auto;
+    margin-left: 50px;
+    width: 700px;
+
+
+}
+
+#enter-area-cash{
+    display: none;
+}
+#pay-money{
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    width: 100px;
+    margin: 0 auto;
+    font-size: 32px;
+    line-height: 50px;
+    color: #000;
+}
+#pay-two-button{
+    height: 40px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+#pay-two-button .pay-button{
+    height: 40px;
+    width: 100px;
+    border-radius: 4px;
+    border:none;
+    background: #999;
+    color: #fff;
+}
+
+#pay-two-button .pay-now{
+    float: left;
+}
+#pay-two-button .pay-later{
+    float: right;
+    background: #43A747;
+}
+#discount{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 32px;
+    padding-top: 25px;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    text-align: center;
+}
+#inputPhone{
+    height: 50px;
+    width: 200px;
+    border:1px solid #43A747;
+    outline: none;
+    float: left;
+    border-radius: 4px;
+    margin-top: 25px;
+    margin-left: 50px;
+    color:#000;
+    font-size: 24px;
+
+}
+#goIn{
+    height: 50px;
+    width: 100px;
+    border-radius: 4px;
+    border:none;
+    outline: none;
+    float: right;
+    margin-right: 50px;
+    margin-top: 25px;
+    color:#fff;
+}
+#goIn:hover{
+    background: #43A747;
+}
+/*--------------------------------------------------------------------------------
+    经销主页
+--------------------------------------------------------------------------------*/
+#show-list{
+    margin-top: 0;
+}
+
+.info-list {
+    background: #fff;
+    height: 50px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.info-list thead{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sell-nav{
+    height: 50px;
+    width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    margin-top: 20px;
+    border-bottom:2px solid #43A747;
+}
+.sell-nav .nav-button{
+    height: 50px;
+    width: 100px;
+    border:none;
+    background: #999;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+.sell-nav .add-class{
+    background: #43A747!important;
+}
+.sell-nav #product-list{
+    background: #43A747;
+}
+#business-info{
+    display: none;
+}
+#my_profit{
+    display: none;
+}
+.my_profit_structure{
+    width: 1000px;
+}
+.my_profit_structure p{
+    margin: 0;
+    padding: 0;
+    font-size: 32px;
+    color: #000;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+/*--------------------------------------------------------------------------------
+    商户版账号信息
+--------------------------------------------------------------------------------*/
+
+.account-container{
+    width: 1000px;
+    margin: 0 auto;
+}
+#account-number{
+    height: 17px;
+    width: 30px;
+    font-size: 15px;
+    color: #999;
+    margin-top: 23px;
+    margin-bottom: 10px;
+}
+.account-container .account-info{
+    height: 100%;
+    width: 100%;
+}
+.account-container .account-info p,.account-container .account-info a,.account-container .account-info input{
+    margin: 0;
+    padding: 0;
+}
+.account-container .account-prompting{
+    width: 100%;
+    height: 40px;
+    background: #f6f6f6;
+    font-size: 15px;
+    color: #ccc;
+    line-height: 40px;
+    text-indent: 20px;
+}
+.account-container .account-user{
+    width: 100%;
+    height: 162px;
+    background: #fff;
+}
+.account-container .account-user .account-user-phone{
+    width: 100%;
+    height: 17px;
+}
+.account-container .account-user .account-phone-nickname-residual,.account-container .account-residual .account-phone-nickname-residual{
+    height: 17px;
+    width: 60px;
+    text-align: right;
+    font-size: 15px;
+    color:#333;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+#account-phone-number{
+    height: 17px;
+    width: 107px;
+    font-size: 15px;
+    color:#333;
+    margin-left: 2px;
+}
+.account-container .account-user a{
+    font-size: 12px;
+    color: #ccc;
+    display: inline-block;
+}
+.account-container .account-user .account-user-phone a{
+    height: 14px;
+    width: 48px;
+    margin-left: 20px;
+}
+.account-container .account-user .account-user-phone p{
+    display: inline-block;
+}
+
+.account-container .account-user .account-user-info{
+    height: 32px;
+    width: 100%;
+    margin-top: 23px;
+}
+.account-container .account-user .account-user-info input,#user-nickname{
+    display: inline-block;
+}
+.account-container .account-user .account-user-info input{
+    height: 32px;
+    width: 180px;
+    margin-left: 2px;
+    border:none;
+    border-radius: 4px;
+    border:1px solid #e0e0e0;
+    outline: none;
+    text-indent: 10px;
+    background: #f6f6f6;
+}
+.account-container .account-user .account-user-info a{
+    margin-left: 10px;
+}
+.account-container .account-info .account-residual{
+    height: 398px;
+    width: 100%;
+    background: #fff;
+}
+.account-container .account-info .account-residual p,.account-container .account-info .account-residual input{
+    display: inline-block;
+}
+#account-remain{
+    width: 100%;
+    height: 28px;
+}
+#account-money{
+    height: 17px;
+    width: 51px;
+}
+#account-remain input{
+    height: 28px;
+    width: 100px;
+    background: #f66f7f;
+    border:none;
+    outline: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 12px;
+    margin-left: 70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

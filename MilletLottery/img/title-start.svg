@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="358px" height="93px" viewBox="0 0 358 93" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: sketchtool 3.4.4 (395) - http://www.bohemiancoding.com/sketch -->
+    <title>title-start</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="结果-中奖-4" sketch:type="MSArtboardGroup" transform="translate(-8.000000, -117.000000)">
+            <g id="title-start" sketch:type="MSLayerGroup" transform="translate(8.000000, 108.000000)">
+                <g id="幸运大抽奖" transform="translate(64.000000, 72.000000)" font-weight="normal" font-family="HYLingXinJ" sketch:type="MSTextLayer" sketch:alignment="middle" font-size="24">
+                    <text stroke="#9E3A21" stroke-width="16" fill="#FEFEFE">
+                        <tspan x="0" y="19">幸运大抽奖</tspan>
+                    </text>
+                    <text fill="#FFFFFF">
+                        <tspan x="0" y="19">幸运大抽奖</tspan>
+                    </text>
+                </g>
+                <path d="M210,72 L219,72 L241,94 L232,94 L210,72 Z M205,72 L196,72 L218,94 L227,94 L205,72 Z M222,72 L358,72 L358,94 L244,94 L222,72 Z" id="Rectangle-48" opacity="0.731343284" fill="#9E3A21" sketch:type="MSShapeGroup" transform="translate(277.000000, 83.000000) scale(-1, 1) translate(-277.000000, -83.000000) "></path>
+                <path d="M14,73 L23,73 L45,95 L36,95 L14,73 Z M9,73 L0,73 L22,95 L31,95 L9,73 Z M26,73 L52,73 L52,95 L48,95 L26,73 Z" id="Rectangle-48" opacity="0.731343284" fill="#9E3A21" sketch:type="MSShapeGroup"></path>
+                <text id="1月29日-2月5日" sketch:type="MSTextLayer" font-family="FZLanTingHeiS-B-GB" font-size="13" font-weight="normal" sketch:alignment="middle" line-spacing="13" fill="#FFF6B3">
+                    <tspan x="203" y="87">1月29日-2月5日</tspan>
+                </text>
+                <g id="导演你的生活" transform="translate(36.000000, 0.000000)" font-weight="normal" font-family="MF LiHei (Noncommercial)" line-spacing="48" sketch:type="MSTextLayer" sketch:alignment="middle" font-size="48">
+                    <text stroke="#9E3A1F" stroke-width="10" fill="#FCFDFC">
+                        <tspan x="0" y="42">导演你的生活</tspan>
+                    </text>
+                    <text fill="#FFF6B3">
+                        <tspan x="0" y="42">导演你的生活</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,203 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #000;
+}
+
+.play-container {
+	position: relative;
+	width: 80%;
+	height: 640px;
+	margin: 20px auto 0 20px;
+	text-align: center;
+}
+
+.mask, #video-player, #video-box, #canvas-box {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#canvas-box {
+	z-index: 3;
+}
+
+.mask {
+	opacity: 0.8;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.box {
+	background-image: url(./../images/mediain/soundtooth_logo.png);
+	
+	/** test1111 case background */
+	/*background-color: #fffeff;*/
+
+	/*background-image: url(./../images/mediain/input.png);*/
+	/*background-image: url(./../images/mediain/google.png);*/
+	/*background-image: url(./../images/mediain/apple.png);*/
+	z-index: 2;
+}
+
+.box--white {
+	background-color: #fff;
+}
+
+.box--kongkabg {
+	background-image: url(./../images/mediain/kongka.png);
+}
+
+.box--color-white {
+	color: #fff !important;
+}
+
+#box2 {
+	background-image: url(./../images/mediain/libai.png);
+	z-index: 3;
+}
+
+#box3 {
+	border-radius: 4px;
+	font-size: 1.6em;
+	font-family: Arial;
+	padding: 0 5px;
+	color: #333;
+	background-color: rgba(0, 0, 0, 0.6);
+	/*transition: color 0.4s;*/
+	/*-webkit-transition: color 0.4s;*/
+	z-index: 4;
+	left: 15px;
+	top: 15px;
+}
+
+#box4 {
+	margin-left: 15px;
+}
+
+#image-box {
+	display: none;
+}
+
+#video-player {
+	width: 100%;
+}
+
+.btn-change-image {
+	width: 100px;
+	height: 26px;
+	background-color: #6799ff;
+	border-radius: 4px;
+	color: #fff;
+	line-height: 26px;
+	text-align: center;
+	clear: both;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+
+.ivana,
+.ivana::before,
+.ivana::after {
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	content: '';
+	pointer-events: none;
+	z-index: 99;
+}
+
+.ivana {
+	top: 400px;
+	display: none;
+}
+
+.overlay {
+	cursor: pointer;
+	position: absolute;
+	z-index: 100;
+	width: 70px;
+	height: 70px;
+	background-color: red;
+}
+
+.ivana::before,
+.ivana::after {
+	opacity: 0;
+	left: 0;
+	top: 0;
+}
+
+.ivana::before,
+.ivana::after {
+	box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.8);
+}
+
+.ivana::before {
+	-webkit-animation: anim-effect-ivana-1 1.2s infinite;
+	animation: anim-effect-ivana-1 1.2s infinite;
+}
+
+.ivana::after {
+	-webkit-animation: anim-effect-ivana-2 1.2s infinite;
+	animation: anim-effect-ivana-2 1.2s infinite;
+}
+
+@-webkit-keyframes anim-effect-ivana-1 {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale3d(0.5, 0.5, 1);
+		transform: scale3d(0.5, 0.5, 1);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: scale3d(1.1, 1.1, 1);
+		transform: scale3d(1.1, 1.1, 1);
+	}
+}
+
+@keyframes anim-effect-ivana-1 {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale3d(0.5, 0.5, 1);
+		transform: scale3d(0.5, 0.5, 1);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: scale3d(1.1, 1.1, 1);
+		transform: scale3d(1.1, 1.1, 1);
+	}
+}
+
+@-webkit-keyframes anim-effect-ivana-2 {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale3d(0.5, 0.5, 1);
+		transform: scale3d(0.5, 0.5, 1);
+	}
+	50%, 100% {
+		opacity: 0;
+		-webkit-transform: scale3d(1.2, 1.2, 1);
+		transform: scale3d(1.2, 1.2, 1);
+	}
+}
+
+@keyframes anim-effect-ivana-2 {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale3d(0.5, 0.5, 1);
+		transform: scale3d(0.5, 0.5, 1);
+	}
+	50%, 100% {
+		opacity: 0;
+		-webkit-transform: scale3d(1.2, 1.2, 1);
+		transform: scale3d(1.2, 1.2, 1);
+	}
+}

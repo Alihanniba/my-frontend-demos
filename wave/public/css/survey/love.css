@@ -1,0 +1,251 @@
+/*--------------------------------------------------------------------------------
+    reset
+--------------------------------------------------------------------------------*/
+body,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,ol,li,th,td,p,blockquote,pre,form,fieldset,legend,input,button,textarea,hr{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+li{list-style:none;}
+fieldset,img{border:0;}
+table{border-collapse:collapse;border-spacing:0;}
+q:before,q:after{content:”;}
+button,input,select,textarea{font-size:100%;}
+legend{color:#000;}
+small{font-size:1rem;}
+hr{border:none;height:1rem;}
+img{width: 100%;}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+.fl{float: left;}
+.fr{float: right;}
+.clearfix{*zoom: 1;}
+.clearfix:before,.clearfix:after{display: table;line-height: 0;content: "";}
+.clearfix:after{clear: both;}
+
+/*--------------------------------------------------------------------------------
+    love
+--------------------------------------------------------------------------------*/
+html {font-size: 37.5px;}
+body {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	color: #666666;
+}
+.swiper-container {
+	height: 100%;
+	text-align: center;
+}
+.swiper-slide {
+	background-image: url("../../images/survey/love/background.jpg");
+	background-position: center center;
+	background-size: cover;
+	height: 100%;
+	position: relative;
+	width: 100%;
+}
+.start {
+	cursor: pointer;
+}
+.one-slide-1 {
+	left: 0;
+	position: absolute;
+	top: 7.72%;
+	width: 10rem;
+}
+.one-slide-1 h1 {
+	font-size: 0.96rem;
+}
+.one-slide-2 {
+	left: 1rem;
+	position: absolute;
+	top: 22.63%;
+	width: 8rem;
+}
+.one-slide-2 p {
+	text-align:justify;
+	font-size: 0.48rem;
+	text-indent: 2em;
+	line-height: 1.67;
+}
+.one-slide-3 {
+	left: 1.08rem;
+	position: absolute;
+	top: 84.71%;
+	width: 7.84rem;
+	height: 1.37rem;
+	cursor: pointer;
+	background: #fcf9c2;
+	color: #be9370;
+	border-radius: 1.07rem;
+	font-size: 0.53rem;
+	line-height: 1.37rem;
+}
+.passdown {
+	left: 4.7rem;
+	font-size: 0;
+	position: absolute;
+	bottom: 2.77%;
+	width: 0.6rem;
+	animation:passdownMove 2s infinite;
+	-moz-animation:passdownMove 2s infinite;
+	-webkit-animation:passdownMove 2s infinite; /*Safari and Chrome*/
+}
+
+@keyframes passdownMove
+{
+0% {bottom: 2.77%;}
+to {bottom: 1.5%;}
+}
+@-moz-keyframes passdownMove /*Safari and Chrome*/
+{
+0% {bottom: 2.77%;}
+to {bottom: 1.5%;}
+}
+@-webkit-keyframes passdownMove /*Safari and Chrome*/
+{
+0% {bottom: 2.77%;}
+to {bottom: 1.5%;}
+}
+
+.white-bg {
+	position: absolute;
+	width: 9rem;
+	left: 0.5rem;
+	top: 20.16%;
+	background-color: rgba(255,255,255,0.8);
+	border-radius: 0.53rem;
+	border: 2px dashed #be9370;
+	padding: 0.89rem 0 0.4rem 0;
+	font-size: 0.45rem;
+	color: #be9370;
+}
+
+.love-gender {
+	width: 8.6rem;
+	margin: 0 auto;
+}
+.love-gender label {
+	display: block;
+}
+.male, 
+.female {
+	width: 50%;
+}
+.avatar {
+	width: 1.36rem;
+	height: 1.33rem;
+	margin: 0 auto;
+	border: 1px solid #f5d1b4;
+	border-radius: 4px;
+}
+.form-group {
+	margin-top: 0.24rem;
+}
+
+input {
+	border: 1px solid #f5d1b4;
+	border-radius: 4px;
+	color: #be9370;
+	font-size: 0.45rem;
+	line-height: 0.68rem;
+	text-align: center;
+	height: 0.68rem;
+}
+input::-webkit-input-placeholder {
+	color: #f5d1b4 !important;
+}
+input:-moz-placeholder {
+	color: #f5d1b4 !important;
+}
+input::-moz-placeholder {
+	color: #f5d1b4 !important;
+}
+input:-ms-input-placeholder {
+	color: #f5d1b4 !important;
+}
+.form-name input {
+	margin: 0 auto;
+	width: 3.5rem;
+}
+.form-sign select {
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	border: 1px solid #f5d1b4;
+	border-radius: 4px;
+	line-height: 0.68rem;
+	color: #be9370;
+	width: 3.1rem;
+	height: 0.68rem;
+	font-size: 0.45rem;
+	text-align: center;
+	text-indent: 2em;
+	padding-right: 0.4rem;
+	box-sizing: content-box;
+	background: url("../../images/survey/love/small.png") no-repeat scroll 3.1rem center #fff;
+}
+.love-phone {
+	width: 86%;
+	margin: 0 auto;
+	border-top: 1px solid #f5d1b4;
+	margin-top: 0.5rem;
+	padding-top: 0.3rem;
+}
+.form-phone label {
+	width: 3.5rem;
+	text-align: right;
+}
+.form-phone input {
+	width: 4.05rem;
+	height: 0.65rem;
+	line-height: 0.65rem;
+	text-align: center;
+}
+.code-btn {
+	display: block;
+	border: 1px solid #fcf9c2;
+	background: #fcf9c2;
+	color: #f5d1b4;
+	width: 4.05rem;
+	height: 0.65rem;
+	line-height: 0.65rem;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.btn-disable {
+	background: #ccc;
+	color: #666;
+}
+.passdown-spe {
+	display: none;
+}
+
+.result-container {
+	height: 60%;
+}
+.result {
+	width: 10rem;
+	border-top: 3px dashed #be9370;
+}
+
+.result h1 {
+	position: absolute;
+	top: 10.29%;
+	width: 10rem;
+	text-align: center;
+	font-size: 0.51rem;
+	color: #be9370;
+}
+.result p {
+	position: absolute;
+	top: 23.34%;
+	left: 1rem;
+	width: 8rem;
+	text-align:justify;
+	font-size: 0.45rem;
+	line-height: 1.59;
+	color: #be9370;
+}
+.slide-2 {
+	overflow: hidden;
+}
+

@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+    .no-wechat
+        h1尊敬的用户您好:
+        p 感谢您对Vego TV的关注，Vego TV是目前中国正版视频内容最全的应用，这里包括直播、点播、并即将和中国上映的影视剧同步更新，抱歉我们当前不支持您现在采用的方式观看影片，但您可以通过其他的方式观看，包括：
+        h1 一、微信中关注公众号 vego 
+        img(src='/img/qrcode@2x.png', alt='qrcode')
+        h1 二、在Roku、Aoole TV、Google Play、三星应用商店中下载Vego TV应用    
+block scripts
+    script
+        :uglify
+            $(document).ready(function() {
+                mobile.init();
+            });

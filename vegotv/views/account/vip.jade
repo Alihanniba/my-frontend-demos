@@ -1,0 +1,110 @@
+extends ../layout
+
+block title
+	title
+		| #{subTitle} - #{site.title}
+
+block content
+	- if (error)
+		main.vip-center
+			| 服务器出现小故障，
+			a(src="javascript:location.reload()") 刷新一下页面看看
+	- else if (user && user.subscription && user.subscription.expired )
+		main.vip-center
+			h1 Vego会员已开通
+			.opened
+				p 有效期: 
+					span #{user.subscription.next_billed_on} 为止
+				img(src="/img/win@2x.png" alt="")
+				div
+					span $
+					span #{subscription.amount}
+					span /月
+		footer.renew-butt
+			a.wechat_pay.weui_btn.weui_btn_primary(href='javascript:;', data-id='#{subscription.id}',data-body='Vego会员服务费用',data-fee="#{subscription.amount * 100}") 续费
+	- else
+		// subscription =  {"id":5,"content_provider_id":1,"slug":"tuxiaobei","name":"兔小贝","amount":"2.99","interval":"month","trial_period_days":0,"desc":null,"created_at":"2016-03-16T07:57:09.168+08:00","updated_at":"2016-03-16T07:57:09.168+08:00","coupon":false,"coupon_scope":null,"synced":true,"creditcard_required":true}
+		main.vip-center
+			h1 Vego会员未开通
+			.not-open
+				p
+					| 开通会员即可观看 
+					br
+					| 最新、最热的影视内容,清晰、稳定的视觉体验
+				div
+					span $
+					span #{subscription.amount}
+					span /月
+		footer.renew-butt
+			a.wechat_pay.weui_btn.weui_btn_primary(href='javascript:;', data-id='#{subscription.id}',data-body='Vego会员服务费用',data-fee="#{subscription.amount * 100}") 立即开通
+			div(style="display:none")
+				span 自动续费,可随时取消
+				input#auto-renew.renew-checkbox(type='checkbox', name='checkbox', value='1')
+				label(for='auto-renew')
+			
+	#loadingToast(style="display: none;")
+		.weui-mask_transparent
+		.weui-toast
+			i.weui-loading.weui-icon_toast
+			p.weui-toast__content
+				| 订单加载中
+
+append commonjs
+	// https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_7&index=6
+	script.
+		var redirect = '#{url}'
+	script
+		:uglify
+			$(document).ready(function() {
+				mobile.init();
+				//mobile.vipCenter();
+			});
+			window['_onWecahtReady'] = function(){
+				$('a.wechat_pay').click(function(e){
+					var loading = $('#loadingToast')
+					loading.show()
+					$.ajax({
+						url: '/service/wechat/pay',
+						dataType: 'json',
+						type:'POST',
+						data:{
+							id: $(this).data('id'),
+							fee: $(this).data('fee'),
+							body: $(this).data('body'),
+							trade_type: 'JSAPI',
+							limit_pay: ''
+						},
+						success: function(data){
+							loading.hide()
+							if( data.code ){
+								return console.error(data.message)
+							}
+							console.log(data.data)
+							WeixinJSBridge.invoke(
+								'getBrandWCPayRequest', 
+								data.data,
+								function(res){
+									console.log(res)
+									// 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回ok，但并不保证它绝对可靠。 
+									if(res.err_msg === "get_brand_wcpay_request:ok" ) {
+										alert('支付成功');
+										location.reload();
+										// location.href = redirect
+									}
+									// 用户取消
+									if(res.err_msg === 'get_brand_wcpay_request:cancel'){
+										alert('用户取消')
+									}
+									// 支付失败
+									if(res.err_msg === 'get_brand_wcpay_request:fail'){
+										alert('支付失败')
+									}
+							})
+						},
+						error: function(xhr, type){
+							loading.hide()
+							console.error('Error', type)
+						}
+					})
+				})
+			}

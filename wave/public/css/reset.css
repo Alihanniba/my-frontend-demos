@@ -1,0 +1,22 @@
+/*--------------------------------------------------------------------------------
+    reset
+--------------------------------------------------------------------------------*/
+body,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,ol,li,th,td,p,blockquote,pre,form,fieldset,legend,input,button,textarea,hr{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+li{list-style:none;}
+fieldset,img{border:0;}
+table{border-collapse:collapse;border-spacing:0;}
+q:before,q:after{content:”;}
+button,input,select,textarea{font-size:100%;}
+legend{color:#000;}
+small{font-size:1rem;}
+hr{border:none;height:1rem;}
+img{width: 100%;}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+.fl{float: left;}
+.fr{float: right;}
+.clearfix{*zoom: 1;}
+.clearfix:before,.clearfix:after{display: table;line-height: 0;content: "";}
+.clearfix:after{clear: both;}
+.dib{display: inline-block;*display: inline;*zoom:1;}

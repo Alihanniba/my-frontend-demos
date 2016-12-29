@@ -1,9 +1,0 @@
-div(style="margin-top:3em;display: none")
-	a.weui-btn.weui-btn_primary(href="/service/wechat/oauth")
-		| 微信认证
-	- if (process.env.NODE_ENV === 'production')
-		a.weui-btn.weui-btn_plain-primary(href="/service/wechat/order")
-			| 微信支付
-	- else
-		a.weui-btn.weui-btn_plain-primary(href="/test/order")
-			| 微信支付

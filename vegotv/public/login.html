@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>VegoTV</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="csrf-token" content="" />
+    <meta name="author" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" sizes="57x57" href="./icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icon/favicon-16x16.png">
+    <link rel="manifest" href="./icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link href="./css/index.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/weui/1.0.0/style/weui.min.css">
+</head>
+<body>
+    <div class="register-container">
+      <form id="register-form">
+        <input type="text" class="register-emial" id="register-emial" placeholder="邮箱">
+        <input type="password" class="register-pwd" id="register-pwd" placeholder="密码">
+        <p class="forget-pwd">忘记密码</p>
+        <p class="error-tip">请输入正确的用户名和密码</p>
+        <!-- <input type="submit" class="register-login" id="register-login" value="登录"> -->
+        <!-- <input type="submit" class="register-sign"  id="register-sign" value="注册"> -->
+        <span class="register-login" id="register-login">登录</span>
+        <span class="register-sign"  id="register-sign">注册</span>
+      </form>
+    </div>
+    <script src="./js/zepto.js"></script>
+    <script src="./js/static_wbuild.js"></script>
+    <script src="./js/static_build.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            mobile.init();
+            mobile.login();
+        });
+    </script>
+</body>
+
+</html>

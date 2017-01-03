@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>上传文件</title>
+	<!-- // <script src="js/jquery-2.1.4.min.js"></script> -->
+	<style>
+		form{
+			position: relative;
+			display: block;
+			height: 600px;
+			width: 600px;
+			margin: 0 auto;
+			border:1px solid #333;
+		}
+		p{
+			margin:0;
+			margin-top: 20px;
+			margin-left: 50px;
+			height: 50px;
+			width: 500px;
+			font-size: 30px;
+			font-weight: bold;
+			text-align: center;
+		}
+		input{
+			display: inline-block;
+			height: 50px;
+			width: 500px;
+			margin-top:50px;
+		}
+		input[type="submit"]{
+			position: absolute;
+			left: 50%;
+			outline:none;
+			border:none;
+			margin-left: -250px;
+			background: #333;
+			color: #fff;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<form action="load.php" method="post">
+		<p>电影信息上传</p>
+		电影名称:<input type="text" name="name" id="name"><br>
+		电影海报:<input type="text" name="img" id="img"><br>
+		电影url:<input type="text" name="url" id="url"><br>
+		<input type="submit" value="提交">
+	</form>
+</body>
+</html>

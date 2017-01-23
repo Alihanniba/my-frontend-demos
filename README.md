@@ -16,6 +16,7 @@
 * [移动端九宫格抽奖活动](#user-content-lottery)
 * [大数据后台移动端Demo版](#user-content-bigData)
 * [微信端视频播放网站Vegotv](#user-content-vegotv)
+* [多媒体视频类App](#user-content-mobileApp)
 
 <h3 id="wechatCard">微信电子名片 (2015-9)</h3>
 
@@ -60,15 +61,32 @@
 
 <h3 id="bigData">大数据后台移动端Demo版 (2016-3)</h3>
 精准化营销大数据后台管理系统移动端Demo版,适配手机及ipad,构建在PHP的Laravel框架之上,后台接口与相关数据已删除,展示仅保留前端样式及逻辑代码
+
 ![image](./Screenshot/index1.jpg)
 ![image](./Screenshot/index2.jpg)
 
 <h3 id="vegotv">微信端视频播放网站Vegotv (2016-9)</h3>
 跑在移动端上(主要是微信端)的一个网络电视播放网站,本人负责全部的页面及逻辑开发、以node作为服务中间层的api接口开发以及以微信为依托的分享以及相应服务,微信登陆及付费非本人开发,相应代码及后台相关接口及配置信息都已删除,代码仅作记载及展示.
+
 ![image](./Screenshot/vego1.jpg)
 ![image](./Screenshot/vego2.jpg)
 ![image](./Screenshot/vego3.jpg)
 ![image](./Screenshot/vego4.jpg)
+
+<h3 id="mobileApp">多媒体视频类App (2016-12)</h3>
+
+项目是一款针对海外华人市场,集成youtube视频分类的自媒体App,首页及频道页UI布局和逻辑、个人中心页布局、项目所有缓存抽象管理、部分node api中间层 为本人所写,技术选型为:
+
+* react负责前端页面逻辑
+* react-router负责页面路由
+* redux负责状态管理
+* webpack打包
+* nodejs 后台api
+* falcor-api接口模型
+* cordova-android及ios打包
+
+![image](./Screenshot/mobile.png)
+
 ___
 
 ![Logo](http://alihanniba.github.io/alihanniba.png)

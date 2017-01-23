@@ -21,42 +21,42 @@
 
 微信电子名片, 即时生成你的专属电子名片,引用百度上传控件webuploader上传,再上传到七牛获取url
 
-![image](./screenshot/wechatCard.jpg)
+![image](./Screenshot/wechatCard.jpg)
 
 
 <h3 id="guoweisu">经销系统未完成版 (2015-10)</h3>
 
 系统架构在laravel框架上,运用laravel5初步完成登陆注册及计算各个等级佣金部分
 
-![image](./screenshot/jingxiao1.jpg)
-![image](./screenshot/jingxiao2.jpg)
-![image](./screenshot/jingxiao3.jpg)
+![image](./Screenshot/jingxiao1.jpg)
+![image](./Screenshot/jingxiao2.jpg)
+![image](./Screenshot/jingxiao3.jpg)
 
 <h3 id="luMovie">撸电影手机网站 (2015-11)</h3>
 
 通过后台上传电影到七牛,获取链接信息,渲染页面,并判断终端是PC或手机做不同处理
 
-![image](./screenshot/luMovie.jpg)
+![image](./Screenshot/luMovie.jpg)
 
 <h3 id="video">Video手机去广告观看视频 (2015-11)</h3>
 
 系统架构在laravel框架上,爬取优酷视频,分类平台去广告观看.(后台代码已删除!)
 
-![image](./screenshot/video_in.jpg)
+![image](./Screenshot/video_in.jpg)
 
 <h3 id="movie">电影票比价手机网站 (2015-12)</h3>
 
 系统架构在laravel框架上,通过爬取猫眼,卖座,时光,微票等电影售票网站价格,地点,以及电影院上映时间等信息,调取本地坐标接口获取距离,依据距离由近到远排序,再依据电影院售票价格做比价调整.最后用户可以依据价格直接依据已选场次在各售票网站买票(整个项目前端部分本人占3/5,爬取信息以及信息整理非本人所写,所以后台代码已删除,这里特此声明!)
 
-![image](./screenshot/movie1.jpg)
-![image](./screenshot/movie2.jpg)
-![image](./screenshot/movie3.jpg)
+![image](./Screenshot/movie1.jpg)
+![image](./Screenshot/movie2.jpg)
+![image](./Screenshot/movie3.jpg)
 
 <h3 id="lottery">移动端九宫格抽奖活动 (2016-1)</h3>
 
 九宫格转盘抽奖活动,适配各手机移动端浏览器.
 
-![image](./screenshot/lottery.jpg)
+![image](./Screenshot/lottery.jpg)
 
 <h3 id="bigData">大数据后台移动端Demo版 (2016-3)</h3>
 精准化营销大数据后台管理系统移动端Demo版,适配手机及ipad,构建在PHP的Laravel框架之上,后台接口与相关数据已删除,展示仅保留前端样式及逻辑代码

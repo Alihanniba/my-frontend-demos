@@ -1,0 +1,17 @@
+.google_box{
+	display: inline-block;
+	margin:0 10px;
+}
+.google_box .icon_box{
+	width: 70px;
+	height: 70px;
+	background: #000;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 50px;
+	text-align: center;
+	line-height: 70px;
+} 
+.google_box .google_text {
+	margin-top: 5px;
+}

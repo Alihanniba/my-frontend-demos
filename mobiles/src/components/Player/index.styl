@@ -1,0 +1,607 @@
+use("add.js")
+//functions
+px2rem(a, b = unit(37.5, rem))
+  (a / b)
+
+textOverflow()
+  white-space nowrap
+  overflow hidden
+  text-overflow ellipsis
+
+.play-selection .player-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    /*background: url(../img/Loadingfigure@2x.png) no-repeat;*/
+    background-size: 100% 100%;
+    display: none;
+}
+.player-cover img{
+    display: block;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.play-selection.play-box {
+    /*background: #333;*/
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+.play-selection video {
+    background: #000;
+}
+
+#film:-webkit-full-screen {
+  width: 100%;
+  height: 100%;
+}
+
+.err-text-tip {
+  display: inline-block;
+  color: black;
+}
+.err-tip-container {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  /*height: 100%;*/
+  /*background-color: rgba(3,3,3,.4);*/
+  top: 50%;
+  font-size: 18px;
+  text-align: center;
+}
+.play-back-home
+  position fixed
+  width 50px
+  height 50px
+  // background-color rgba(3,3,3,.4)
+  background-image url(../../../public/p-back.png)
+  background-size 10px 16px
+  background-repeat no-repeat
+  background-position 50%
+  z-index 1000
+  border-radius 50%
+  top 0px
+  left 0px
+.play-back-arrow {
+  color: rgb(66, 139, 202);
+  font-size: 28px;
+  position: absolute;
+  top: -0.21333333333333335rem;
+  display: block;
+  left: 0.13333333333333333rem;
+}
+.selections-box
+  // position absolute
+  // top px2rem(252)
+  height px2rem(430)
+  overflow scroll
+  width 100%
+  background-color rgba(0,0,0,0.04)
+  padding-top 7px
+.functionNav-box
+  // position fixed
+  width 100%
+  height 42px
+  // top px2rem(210)
+  z-index 1000
+  background-color #fff
+  // border-bottom 0.5px solid rgba(0,0,0,.12)
+  ul
+    width 100%
+    height 20px
+    // margin-top px2rem(11.5)
+    padding-top 11.5px
+    // margin-left 5%
+    font-size 0
+    li
+      display inline-block
+      width 33.3%
+      height 20px
+      color #2b2c39
+.func-collect-item
+  background-image url(../../../public/p-collect@2x.png)
+  background-size 20px 20px
+  width 20px
+  height 20px
+  margin-left px2rem(42)
+  display inline-block
+
+.func-collected-item
+  background-image url(../../../public/p-collect-selected@2x.png)
+  background-size 20px 20px
+  width 20px
+  height 20px
+  margin-left px2rem(42)
+  display inline-block
+//
+funcNavImage(url, size)
+  background-image url(url)
+  background-size 20px 20px
+  background-repeat no-repeat
+  background-position size
+
+.func-image-item
+  funcNavImage('../../../public/p-image@2x.png', 50%)
+  opacity 0.6
+.func-imaged-item
+  funcNavImage('../../../public/p-image-selectd@2x.png', 50%)
+
+.func-share-item
+  funcNavImage('../../../public/p-share@2x.png', 55.5%)
+  opacity 0.6
+.func-shared-item
+  funcNavImage('../../../public/p-share-selected@2x.png', 50%)
+
+.introduce-box
+  width 100%
+  position relative
+  height px2rem(72.5)
+  overflow hidden
+  transition max-height .25s
+  border-bottom 1px solid rgba(0,0,0,.12)
+  font-size 13px
+  color rgba(43, 44, 57, .5)
+  background-color #fff
+  .introduce-more
+    position: absolute
+    top: px2rem(22)
+    right 0
+    background-image url(../../../public/p-arrow-down@2x.png)
+    background-size px2rem(17) px2rem(10)
+    background-position 12.5px 50%
+    background-repeat no-repeat
+    width px2rem(50)
+    height px2rem(50)
+  .introduce-actor
+    margin-bottom 3px
+    margin-left px2rem(16)
+    textOverflow()
+  &.active
+    height: auto;
+    .introduce-more
+      background-image url(../../../public/p-arrow-up.png)
+    .introduce-actor
+      white-space inherit
+
+.introduce-score
+  width 100%
+  height px2rem(40.5)
+  line-height px2rem(40.5)
+  color #000
+  font-size 19px
+  span
+    display inline-block
+    &:first-child
+      textOverflow()
+      width 70%
+      padding-left px2rem(16)
+      float left
+    &:last-child
+       width 30%
+       text-align right
+       padding-right px2rem(17.5)
+
+.introduce-play-count
+.introduce-director
+  font-size 0
+  width: 78%
+  margin-left: px2rem(16)
+  margin-bottom 3px
+
+.introduce-director
+  li:first-child
+    margin-bottom 3px
+// .introduce-actor
+//   margin-bottom 3px
+//   margin-left px2rem(16)
+  // height px2rem(24)
+  // line-height px2rem(24)
+.introduce-type
+  margin-bottom 3px
+  margin-left: px2rem(16)
+
+.introduce-play-count li
+.introduce-director li
+  font-size 13px
+  display: inline-block;
+  width: 60%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden
+
+.introduce-desc
+  margin-left px2rem(16)
+  margin-bottom px2rem(10)
+  overflow hidden
+  p
+    line-height: 16px;
+
+.episodes-box
+  width 100%
+  height 100%
+  position relative
+  overflow hidden
+  border-bottom 1px solid rgba(0,0,0,0.12)
+  background-color #fff
+  &::-webkit-scrollbar
+    display none
+.all-episodes-box
+  width 100%
+  height 100%
+  position fixed
+  top 5.6rem
+  overflow hidden
+  border-bottom 1px solid rgb(204,204,204)
+  z-index 1000
+  background-color #fff
+
+// .episodes-box::-webkit-scrollbar {
+//     display: none;
+// }
+// 相关视频右边的icon
+relateVideoIcon(url, w, h)
+  display inline-block
+  width 100%
+  color #000
+  height px2rem(20)
+  background-image url(url)
+  background-size px2rem(w) px2rem(h)
+  background-repeat no-repeat
+  background-position 100% 50%
+.episodes-title-update
+  width 90%
+  margin-top px2rem(10)
+  // margin-left px2rem(16)
+  p
+    display inline-block
+    &:first-child
+      width 30%
+      border-left 2px #ff566d solid
+      padding-left px2rem(16)
+    &:last-child
+      width 65%
+
+.related-video-text
+  width 100%
+  margin-top px2rem(10)
+  // padding-left px2rem(16)
+  .related-arrow-close
+    relateVideoIcon('../../../public/p-close@2x.png', 16, 16)
+    background-position 93% 50%
+    font-size 16px
+    border-left 2px #ff566d solid
+    padding-left px2rem(16)
+.related-video-arrow
+  font-size 16px
+  relateVideoIcon('../../../public/p-arrow-right@2x.png', 10, 18)
+  background-position 93% 50%
+  border-left 2px #ff566d solid
+  padding-left px2rem(16)
+.episodes-update {
+  text-align: right;
+  color rgba(43, 44, 57, .5);
+  position: relative;
+  right: px2rem(-15)
+}
+.episodes-title {
+  font-size: 16px;
+  color: #000
+}
+.episodes-arrow-close {
+  position absolute
+  top px2rem(0)
+  right px2rem(0)
+  background-image url(../../../public/p-close@2x.png)
+  background-size px2rem(16) px2rem(16)
+  background-repeat no-repeat
+  background-position 50% 25%
+  width px2rem(50)
+  height px2rem(50)
+}
+.episodes-arrow-right
+  position absolute
+  top px2rem(-6)
+  right px2rem(0)
+  background-image url(../../../public/p-arrow-right@2x.png)
+  background-size px2rem(10) px2rem(10)
+  background-repeat no-repeat
+  background-position 12.5px 58%
+  width px2rem(45)
+  height px2rem(45)
+.episodes-container
+.actor-container
+.episodes-variety-container
+  width: 100%
+  height: 100%
+  overflow-x: scroll
+  margin-top: 8px
+  margin-bottom: 0.26666666666666666rem
+  padding-right: 6%
+  white-space: nowrap
+  // font-size 0
+.episodes-container::-webkit-scrollbar{
+  display: none
+}
+.actor-container::-webkit-scrollbar {
+    display: none;
+}
+.episodes-variety-box
+  width 100%
+  margin-top px2rem(13)
+  .playing
+    color #ff566d
+  div
+    width 100%
+    li
+      width 100%
+      padding-left px2rem(20)
+      margin-bottom px2rem(8)
+      textOverflow()
+
+.all-varietys
+  height px2rem(400)
+  overflow scroll
+  figure
+    width 100%
+    height px2rem(88)
+    padding-top: px2rem(10)
+    &:not(:first-child)
+      border-top 1px solid rgba(0, 0, 0, 0.12)
+    img
+      display inline-block
+      width 31.5%
+      height px2rem(68)
+      margin-left px2rem(10)
+    figcaption
+     display inline-block
+     width 60%
+     height px2rem(68)
+     line-height px2rem(68)
+     margin-left px2rem(16)
+     font-size 16px
+     textOverflow()
+.episodes-variety-container {
+  display: inline-block;
+}
+.episodes-container
+  li
+    display inline-block
+    width 35px
+    height 35px
+    line-height 35px
+    text-align center
+    margin-left 28px
+    font-size px2rem(16)
+    &:first-child
+      margin-left px2rem(14)
+.all-episodes-container
+  width: 100%;
+  height:10.4rem;
+  border-top: 1px solid rgba(0, 0, 0, .08)
+  margin-top: px2rem(9)
+  padding-top: px2rem(12)
+  margin-bottom: 0.26666666666666666rem;
+  padding-right: 6%;
+  overflow-y: scroll;
+  li
+    display inline-block
+    width px2rem(35)
+    height px2rem(35)
+    line-height px2rem(35)
+    text-align center
+    margin-left px2rem(32)
+    margin-bottom px2rem(10)
+    font-size px2rem(16)
+
+.episodes-container
+.all-episodes-container
+  .playing
+    border-radius 50%
+    background-color #ff566d
+    // box-shadow 0 1px 2px 0 #ff566d
+    border solid 1px #ff788a
+    color #fff
+
+.actor-container
+  figure
+    display inline-block
+    width px2rem(49)
+    height px2rem(49)
+    margin-left: px2rem(32)
+    text-align: center
+    &:first-child
+      margin-left: px2rem(9)
+    figcaption
+      textOverflow()
+      padding-top px2rem(6)
+      color rgba(43, 44, 57, .5)
+    img
+      width 100%
+      height 100%
+      border-radius 50%
+
+.related-video-box {
+  overflow-x: hidden;
+  background-color: #FFF;
+}
+.related-video-box.unfold {
+  position absolute
+  top -0.9333333333333333rem
+  height px2rem(450)
+  z-index 10000
+}
+.related-arrow-right {
+  position: absolute;
+  font-size: 30px;
+  /*top: 5.333333333333333rem;*/
+  top: 0;
+  color: rgb(39,136,252);
+  right: 5%
+}
+
+.related-video-container
+  width 100%
+  margin-top px2rem(8)
+  // padding-top px2rem(8)
+  border-top 1px solid rgba(0, 0, 0, .08)
+  font-size 0
+  // max-height 10.16rem
+  // overflow scroll
+  &::-webkit-scrollbar
+    display none
+  .related-figure
+    position relative
+    display inline-block
+    width 45.8%
+    height 132px
+    margin-left 2.6666667%
+    font-size 0
+    .related-img
+      width 100%
+      height 100px
+// .related-video-container::-webkit-scrollbar {
+//     display: none;
+// }
+.related-type
+  position absolute
+  bottom 32px
+  left 0
+  color #fff
+  font-size 11px
+  padding 0 8px
+  background rgba(0, 0, 0, .6)
+  height 20px
+  line-height 20px
+.related-desc
+  position absolute
+  right 0
+  height 20px
+  line-height 20px
+  font-size 11px
+  padding 0 8px
+  background rgba(0, 0, 0, .6)
+  bottom 32px
+  color #fff
+  font-size 11px
+.related-title
+  height 32px
+  line-height 32px
+  color #2b2c39
+  white-space nowrap
+  overflow hidden
+  text-overflow ellipsis
+  text-align left
+  padding-left px2rem(5)
+  font-size 16px
+
+.videos-look-more
+  width 100%
+  text-align center
+  font-size 16px
+  margin-bottom 0.26666666666666666rem
+
+.share-video-box {
+  width: 100%;
+  /*height: 100px;*/
+  z-index: 1000;
+  bottom: 0;
+  position: fixed;
+  background-color: #FFF;
+  padding-top: 0.4rem
+}
+.share-video-box figure{
+  width: 25%;
+  /*height: 100px;*/
+  display: inline-block;
+  margin-left: 6.25%;
+  text-align: center;
+}
+.share-video-box figure img {
+  width: 100%;
+  height: 50px;
+}
+.share-box-cancle {
+  text-align: center;
+  border-top: 1px solid;
+  margin-top: 0.26666666666666666rem;
+  margin-bottom: 0.26666666666666666rem;
+  padding-top: 0.26666666666666666rem;
+}
+.ofhidden {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+.opacity-shade {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3,3,3,.4);
+  top: 0;
+  z-index: 999
+}
+
+.live-name
+  textOverflow()
+  font-size 18px
+  color #2b2c39
+  padding-top px2rem(8.5)
+  margin-left px2rem(16)
+
+.live-rating
+  font-size 13px
+  color rgba(43, 44, 57, .5)
+  margin-top px2rem(9)
+  margin-left px2rem(20)
+  margin-bottom px2rem(20)
+
+.live-box
+  background-color #FFF
+  border-bottom 1px solid rgba(0 ,0 ,0, 0.08)
+
+.related-live-video
+  background-color #FFF
+  position relative
+  .related-live-line
+    position absolute
+    width 2px
+    height 14px
+    background-color #ff566d
+    top px2rem(15)
+  h1
+    font-size 16px
+    color #2b2c39
+    height px2rem(42)
+    line-height px2rem(42)
+    border-bottom 1px solid rgba(0,0,0,0.08)
+    // padding-top px2rem(10)
+    // margin-bottom px2rem(10)
+    padding-left px2rem(16)
+    // border-left 3px solid #ff566d
+  ul
+    width 100%
+    margin-top px2rem(10)
+    li
+      textOverflow()
+      width 100%
+      font-size 15px
+      margin-left px2rem(20)
+      margin-bottom px2rem(13)
+.divisionRect
+  width 100%
+  height 7px
+  background-color rgba(0,0,0,0.04)
+.click-look-more
+  margin-top 30px
+  margin-bottom 16px
+  text-align center
+  font-size 16px
+  color #2b2c39

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+  <title>VEGO TV</title>
+  <!-- <script src="http://web.ottcloud.tv/common/js/hls.min.js"></script> -->
+	<script>
+		window["config"]={hashHistory:true,base:location.href,fetchVideo:true,testcdn:false};
+		(function(){
+			var agent = 'navigator' in window && 'userAgent' in navigator && navigator.userAgent.toLowerCase() || '';
+			var html = document.getElementsByTagName('html')[0]
+			var className = html.className || '';
+			if(/micromessenger/i.test(agent)){
+				html.setAttribute('class', className + ' wechat')
+				window['config'].wechat = true
+			}
+			if(/ipad/i.test(agent) || /iphone os/i.test(agent) ||/midp/i.test(agent) || /rv:1.2.3.4/i.test(agent) ||
+					/ucweb/i.test(agent) || /android/i.test(agent) ||/windows ce/i.test(agent) || /windows mobile/i.test(agent)){
+				html.setAttribute('class', className + ' mobile')
+				window['config'].mobile = true
+			}else if(/vego/i.test(agent)){
+				html.setAttribute('class', html.className + ' vego')
+				window['config'].cordova = true
+				var match = agent.match(/vego\/v?([^ ]+)/i)
+				window["config"].cordova_v=match&&match[1];
+			}else{
+				html.setAttribute('class', html.className + ' desktop')
+				window['config'].desktop = true
+			}
+			if(/cordova/i.test(className)){
+				window['config'].cordova = true
+				document.write('<script src="cordova.js"><\/scr'+'ipt>')
+			}
+			config.env=/production/.test(className)?'production':'develop';
+			window.handleOpenURL=function(url){
+				console.log("received url: "+url);
+				url=url.replace("vegotv://","");
+				if(!/^\//.test(url)){url="/"+url}
+				var href=window.config.hashHistory?window.location.href.replace(/#.+/i,"")+"#":window.config.base;
+				window.location.href=href+url
+			};
+    }());
+		//window.config.testcdn='http://media-resource.com0.z0.glb.qiniucdn.com/%E4%B8%83%E7%89%9B%E4%BA%91%E5%AD%98%E5%82%A8%E8%A7%86%E9%A2%91%EF%BC%8D%E4%B8%89%E5%91%A8%E5%B9%B4.mp4'
+	</script>
+	<style>
+		::-webkit-scrollbar { width: 0;-webkit-appearance: none;}
+		.canvas{
+			height: 100%;
+		}
+	</style>
+</head>
+
+<body>
+  <div id="root" class="canvas"></div>
+  <script src="bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+// Variables
+fz = 0.4rem // font-size 15px
+lw = 4.586666666666667rem //live-list width 172px
+lh = 2.6666666666666665rem // live-list height 100px
+
+//live container
+.live-container
+  position absolute
+  width 100%
+  top 1.18rem
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, .05) inset
+
+//live list
+.live-list
+  width: 100%
+  margin-top: 0.5333333333333333rem
+  margin-bottom: 2.6133333333333333rem
+  // overflow-y: scroll
+  &::-webkit-scrollbar
+    display: none
+  figure
+    display: inline-block
+    width: 45.8%
+
+    &:nth-child(odd)
+      margin-left 2.6666667%
+      margin-right 2.6666667%
+    img
+      width: 100%
+      height: lh
+    figcaption
+      text-align: center
+      white-space: nowrap
+      text-overflow: ellipsis
+      overflow: hidden
+      font-size: fz
+      margin-top 5px
+      margin-bottom 8px
+.live-refresh
+  text-align: center
+  display: block
+  font-size: fz

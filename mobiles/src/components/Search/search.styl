@@ -1,0 +1,194 @@
+//functions
+px2rem(a, b = unit(37.5, rem))
+  (a / b)
+
+//Variables
+$inputH = px2rem(30) //30px .8
+
+.search-box
+  margin-top px2rem(6) //6px .16
+
+.search-nav-box
+  position relative
+  width 100%
+  height $inputH
+
+.search-nav-input
+  -webkit-appearance none
+  -webkit-font-smoothing: antialiased
+  display inline-block
+  width 80%
+  height $inputH
+  line-height px2rem(14)
+  box-sizing border-box
+  font-size 13px
+  border 1px solid rgba(43, 44, 57 .4)
+  color rgba(43, 44, 57, .5)
+  padding 0 0 0 px2rem(34)
+  border-radius ($inputH / 2)
+  background-image url(../../../public/search@2x.png)
+  background-position px2rem(8) center
+  background-repeat no-repeat
+  background-size px2rem(15) px2rem(15)
+  margin-left px2rem(16)
+  &:after
+    width: ($inputH * 10)
+  &::-webkit-search-cancel-button
+    display none
+
+.search-cancle
+  font-size 15px
+  font-weight 500
+  margin-right px2rem(16)
+  margin-top px2rem(8)
+  display inline-block
+  float right
+
+.search-nav-shadow
+  width 100%
+  height 5px
+  box-shadow 0px 2px 5px rgba(0,0,0,0.05) inset
+  margin-top px2rem(6)
+
+.search-del
+  top: px2rem(0)
+  position: absolute
+  right: 18.67%
+  font-size: 0.8rem
+  width: px2rem(12)
+  height: px2rem(12)
+
+.search-record-box
+  margin: px2rem(10) auto
+
+.search-record-button
+  width 100%
+  height px2rem(42)
+  line-height px2rem(42)
+
+.search-record-trash
+  width 10%
+  height: px2rem(14)
+  padding-right 0.4266666666666667rem
+  background-image url(../../../public/s-delete@2x.png)
+  background-position 8px center
+  background-repeat no-repeat
+  background-size px2rem(14) px2rem(14)
+
+.search-record-box
+  span
+    display: inline-block
+
+.search-record-text
+  padding-left px2rem(16)
+  width 90%
+  font-size 16px
+  color #2b2c39;
+  opacity .5
+
+.search-record-container
+  font-size: 0
+  li
+    margin-left 16%
+    margin-bottom px2rem(25)
+    display inline-block
+    width px2rem(100)
+    height px2rem(30)
+    color #fff
+    background-color #ff566d
+    line-height px2rem(30)
+    border-radius px2rem(15)
+    text-align center
+    font-size px2rem(15)
+    white-space nowrap
+    text-overflow clip
+    overflow hidden
+  li:nth-child(even)
+    margin-left 14.6666%
+
+.search-name-list
+  width: 90%
+  margin-left: 5%
+  margin-top: px2rem(20)
+  li
+    height: px2rem(40)
+    line-height: px2rem(40)
+    &:not(:first-child)
+      border-top: 1px solid rgba(0, 0, 0, .12)
+
+.clear-record-box
+  position: absolute
+  top: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, .3)
+  h1
+    font-size 16px
+    text-align center
+    width 100%
+    height px2rem(55)
+    line-height px2rem(55)
+    color #2b2c39
+    border-radius 5px
+  .clear-record-container
+    background-color #fff
+    width px2rem(335)
+    height px2rem(110)
+    margin-top px2rem(230)
+    margin-left px2rem(20)
+    margin-right px2rem(20)
+    border-radius 5px
+.operation-container
+  span
+    display inline-block
+    width px2rem(94)
+    height px2rem(24)
+    line-height px2rem(24)
+    text-align center
+    background-color #FFF
+    border solid 1px rgba(0, 0, 0, 0.5)
+    &:first-child
+      margin-left px2rem(60)
+    &:last-child
+      margin-left px2rem(28)
+  .active
+    border none
+    background-color: #ff3838
+    color: #fff
+
+.result-list-box
+  margin-top px2rem(10)
+  h1
+    height: px2rem(42)
+    line-height: px2rem(42)
+    font-size: px2rem(16)
+    margin-left: px2rem(16)
+    color: #525873;
+
+.result-list-item
+  width: 100%
+  height: px2rem(84)
+  border-bottom: 1px solid rgba(43, 44, 57, 0.5)
+  img
+    width: px2rem(118)
+    float: left
+    height: px2rem(68)
+    margin-top: px2rem(8)
+    margin-left: px2rem(10)
+
+.result-list-desc
+  width px2rem(247)
+  height px2rem(84)
+  float left
+  padding-left px2rem(16)
+  .result-name
+    font-size 16px
+    color #ff566d
+    margin-top  px2rem(14)
+    white-space nowrap
+    text-overflow ellipsis
+    overflow hidden
+  .result-type
+    color rgb(153, 153, 153)
+    font-size 13px
+    margin-top px2rem(11)

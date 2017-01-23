@@ -1,0 +1,111 @@
+.items-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.item-one {
+
+}
+
+.item-icon {
+    width: 35px;
+    font-size: 0.6rem;
+    color: #FB3B5B;
+    text-align: center;
+}
+
+.item-content {
+    /*flex: 1;*/
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+}
+
+.item-main {
+    display: flex;
+    flex: 1;
+    line-height: 0.85rem;
+}
+
+.item-title {
+    flex: 1;
+}
+
+.collect-num {}
+
+.ion-chevron-right {
+    width: 50px;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.portion-episode {
+    /*display: flex;*/
+    display: -webkit-box;
+    white-space: nowrap;
+    /*justify-content: flex-start;*/
+    overflow-x: scroll;
+    margin: 0 10px;
+}
+
+.portion-episode::-webkit-scrollbar {
+    display: none;
+}
+
+.portion-episode figure {
+    padding: 10px 10px 0 0;
+    width: 122px;
+}
+
+.portion-episode img,
+.portion-episode figcaption {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.portion-episode img {
+    width: 100%;
+    height: 70px;
+    background: url('../../../public/default.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+.portion-episode figcaption {
+    line-height: 0.5rem;
+    height: 0.5rem;
+}
+
+.noHistory{
+    text-align: center;
+}
+
+/*********** 图标  ************/
+.items-container .item-icon-self{
+    background-image: url('../../../public/icon.png');
+    background-repeat: no-repeat;
+    background-size: 200px;
+    margin-left: 10px;
+}
+
+.ion-clock-self{
+
+}
+
+.ion-star-self{
+    background-position: -38px 0px;
+}
+
+.ion-email-self{
+    background-position: -83px 0px;
+}
+
+.ion-edit-self{
+    background-position: -126px 0px;
+}
+
+.ion-gear-self{
+    background-position: -164px 0px;
+}
+

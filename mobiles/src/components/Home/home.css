@@ -1,0 +1,86 @@
+.nav-box {
+    /*height: 43px;*/
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    top: 44px;
+    z-index: 99;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, .05) inset;
+}
+
+.nav-content {
+    width: 93%;
+    /*height: 100%;*/
+    margin: 0 auto;
+    display: flex;
+}
+
+.nav-header {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: flex;
+}
+
+.nav-main {
+    /*height: 100%;*/
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+.nav-header::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-main li {
+    /*height: 100%;*/
+    display: inline-block;
+    color: rgba(43, 44, 57, .6);
+    line-height: 100%;
+    padding: 12px 9px;
+    font-size: 17px;
+}
+
+.nav-main li.active {
+    color: #ff566d;
+    /*border-bottom: 2px solid #ff566d;*/
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    margin: 10px 0 0 10px;
+}
+
+.right.add {
+    background: url('../../../public/add@2x.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+.live-refresh {
+    text-align: center;
+    display: block;
+    font-size: 16px
+}
+
+.home-list {
+    padding-top: 85px;
+}
+
+ons-icon {
+    height: 100%;
+    line-height: 1.18rem;
+    display: inline-block;
+    color: rgb(103, 153, 255);
+}
+
+ons-toolbar-button>ons-icon[icon*="ion-"] {
+    font-size: 0.75rem !important;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+  <title>VEGO TV</title>
+	<script>
+    window["config"]={hashHistory:true,base:location.href,fetchVideo:false,testcdn:false};
+		(function(){
+			function insert(src, cb){
+				var script = document.createElement('script');
+				script.src = src;
+				script.onload = function(){
+					cb && cb(null)
+				}
+				script.onerror = function(){
+					cb && cb(true)
+				}
+				var eles = document.getElementsByTagName('head')
+				eles && eles[0] && eles[0].appendChild(script)
+			}
+			var agent = 'navigator' in window && 'userAgent' in navigator && navigator.userAgent.toLowerCase() || '';
+			var html = document.getElementsByTagName('html')[0]
+			var className = html.className || '';
+			if(/micromessenger/i.test(agent)){
+				html.setAttribute('class', className + ' wechat')
+				window['config'].wechat = true
+			}else if(/vego/i.test(agent)){
+				html.setAttribute('class', html.className + ' vego')
+				window['config'].cordova = true
+				var match = agent.match(/vego\/v?([^ ]+)/i)
+				window["config"].cordova_v=match&&match[1];
+			}else if(/ipad/i.test(agent) || /iphone os/i.test(agent) ||/midp/i.test(agent) || /rv:1.2.3.4/i.test(agent) ||
+					/ucweb/i.test(agent) || /android/i.test(agent) ||/windows ce/i.test(agent) || /windows mobile/i.test(agent)){
+				html.setAttribute('class', className + ' mobile')
+				window['config'].mobile = true
+			}else{
+				html.setAttribute('class', html.className + ' desktop')
+				window['config'].desktop = true
+			}
+			if(/cordova/i.test(className) || config.cordova){
+				var path = /ipad/i.test(agent) || /iphone os/i.test(agent) ? 'ios' : 'android'
+				insert(path + "/cordova.js", function(err){
+					if(err){
+						insert("cordova.js")
+					}
+				})			
+			}
+			config.env=/production/.test(className)?'production':'develop';
+			window.handleOpenURL=function(url){
+				console.log("received url: "+url);
+				url=url.replace("vegotv://","");
+				if(!/^\//.test(url)){url="/"+url}
+				var href=window.config.hashHistory?window.location.href.replace(/#.+/i,"")+"#":window.config.base;
+				window.location.href=href+url
+			};
+    }());
+	</script>
+	<style>
+		body{background:#fff;}
+		::-webkit-scrollbar { width: 0;-webkit-appearance: none;}
+	</style>
+</head>
+<body>
+  <div id="root"></div>
+	<script src="./index.js"></script>
+</body>
+</html>

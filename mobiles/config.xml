@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.vego.tv" version="0110.1123" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>VegoTV</name>
+    <description>
+       VegoTV
+    </description>
+    <author email="dev@alihanniba.com" href="http://alihanniba.com">
+        VegoTV dev team
+    </author>
+    <allow-navigation href="*://*.vego.tv/*" />
+    <allow-navigation href="*://*.google.com/*" />
+    <allow-navigation href="*://*.youtube.com/*" />
+    <preference name="KeepRunning" value="true" />
+    <preference name="WebViewBounce" value="false" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="AppendUserAgent" value=" Vego/1.0" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#000000" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="LoadingPageDialog" value="请稍候，正在加载数据" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="EnableViewportScale" value="true" />
+    <preference name="MediaPlaybackAllowsAirPlay" value="true" />
+    <preference name="AllowInlineMediaPlayback" value="true" />
+    <preference name="MediaPlaybackRequiresUserAction" value="false" />
+    <preference name="BackupWebStorage" value="none" />
+    <preference name="KeyboardDisplayRequiresUserAction" value="false" />
+    <preference name="KeyboardShrinksView" value="true" />
+    <preference name="UIWebViewDecelerationSpeed" value="fast" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <preference name="ErrorUrl" value="error.html" />
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="Device">
+        <param name="ios-package" value="CDVDevice" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="StatusBar">
+        <param name="ios-package" onload="true" value="CDVStatusBar" />
+    </feature>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="vegotv:*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <engine name="ios" spec="~4.2.1" />
+    <engine name="android" spec="~5.2.2" />
+</widget>

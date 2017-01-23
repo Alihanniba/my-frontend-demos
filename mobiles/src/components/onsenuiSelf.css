@@ -1,0 +1,23 @@
+.button--material{
+  height: 45px;
+  line-height: 45px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #ff566d;
+  border-radius: 25.5px;
+  -webkit-appearance: none;
+}
+
+.text-input--material{
+  height: 50px;
+  padding-left: 15px;
+}
+.text-input--material__label{
+  left:20px;
+  top: 10px;
+  font-size: 20px;
+}
+
+.button--large{
+  border-radius: 0.8rem;
+}

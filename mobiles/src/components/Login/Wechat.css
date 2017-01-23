@@ -1,0 +1,39 @@
+.wechat{
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 10px;
+}
+.wechat .ons-icon{
+	background: #25c258; 
+	width: 70px; 
+	height: 70px; 
+	border-radius: 50%; 
+	color: rgb(255, 255, 255); 
+	font-size: 40px; 
+	text-align: center; 
+	line-height: 70px; 
+	border: none; 
+	display: inline-block;
+}
+.wechat_text{
+	margin-top: 5px;
+}
+
+.noWechat{
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 10px;
+}
+
+.noWechat .ons-icon{
+	background: #636764; 
+	width: 70px; 
+	height: 70px; 
+	border-radius: 50%; 
+	color: rgb(255, 255, 255); 
+	font-size: 40px; 
+	text-align: center; 
+	line-height: 70px; 
+	border: none; 
+	display: inline-block;
+}

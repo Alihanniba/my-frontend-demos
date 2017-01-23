@@ -1,0 +1,82 @@
+.header-container {
+    height: 44px;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    background: #fff;
+}
+
+.header-main {
+    width: 92%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header-logo {
+    display: block;
+    overflow: hidden;
+    height: 13px;
+    width: 48.5px;
+    position: absolute;
+    top: 50%;
+    margin-top: -6.5px;
+    background: url('../../../public/logo@2x.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+.logo-icon {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.icon-box {
+    height: 100%;
+    display: inline-block;
+    float: right;
+    overflow: hidden;
+}
+
+.icon-main {
+    height: 100%;
+}
+
+.icon-one {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.icon-one.search {
+    background: url('../../../public/search@2x.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+.icon-one.search:active {
+    background: url('../../../public/search-active@2x.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+.icon-one.compile {
+    background: url('../../../public/compile@2x.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+.icon-one.compile:active {
+    background: url('../../../public/compile-active@2x.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+.icon-one.collect {
+    background: url('../../../public/collect@2x.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+.icon-one.collect:active {
+    background: url('../../../public/collect-active@2x.png') no-repeat;
+    background-size: 100% 100%;
+}

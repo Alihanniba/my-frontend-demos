@@ -1,0 +1,101 @@
+.more-compile {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    z-index: 101;
+    color: #2b2c39;
+}
+
+.toast {
+    padding: 10px;
+    background: #999;
+    color: #000;
+    border-radius: 4px;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 103;
+    display: none;
+}
+
+.toast-show {
+    display: block;
+}
+
+.mc-header {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    background: #fff;
+    top: 0;
+    z-index: 102;
+    box-shadow: 0px 1px 4.5px rgba(0, 0, 0, .05);
+}
+
+.mc-nav {
+    position: relative;
+    width: 92%;
+    margin: 0 auto;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: #2b2c39;
+}
+
+.back-com {
+    position: absolute;
+    left: 0;
+    width: 50px;
+    text-align: left;
+}
+
+.mc-main {}
+
+.mc-main li {
+    height: 55px;
+    line-height: 55px;
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+}
+
+.mc-item {
+    width: 92%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mc-name {
+    font-size: 16px;
+}
+
+.mc-butt {
+    height: 23px;
+    width: 73px;
+    border-radius: 50px;
+    border: none;
+}
+
+.mc-add-butt {
+    background: #ff566d;
+    color: #fff;
+}
+
+.mc-cancel-butt {
+    background: #fff;
+    color: #2b2c39;
+    border: 1px solid #2b2c39;
+}
+
+.mc-content {
+    overflow-y: scroll;
+    padding-top: 50px;
+    height: 100%;
+}
+
+.mc-content::-webkit-scrollbar {
+    display: none;
+}

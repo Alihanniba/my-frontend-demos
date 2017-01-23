@@ -1,0 +1,16 @@
+.loginTip{
+	font-size: 0.5rem;
+	padding: 1rem 10px 10px;
+	border-bottom: 1px solid #ccc;
+	margin:0;
+}
+.inputBox{
+	margin: 0.8rem 10px;
+}
+.buttonCss{
+	margin: 1rem 10px;
+}
+
+ons-input input{
+	height: 30px;
+}

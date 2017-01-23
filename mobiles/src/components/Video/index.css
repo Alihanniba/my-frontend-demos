@@ -1,0 +1,238 @@
+
+/* transition  */
+/*
+transitionEndEventName = () => {
+	let i,
+			undefined,
+			el = document.createElement('div'),
+			transitions = {
+					'transition':'transitionend',
+					'OTransition':'otransitionend',  // oTransitionEnd in very old Opera
+					'MozTransition':'transitionend',
+					'WebkitTransition':'webkitTransitionEnd'
+			};
+
+	for (i in transitions) {
+			if (transitions.hasOwnProperty(i) && el.style[i] !== undefined) {
+					return transitions[i];
+			}
+	}
+	return '';
+}
+ele.addEventListener(transitionEndEventName, () => { console.log('end')}, false)
+*/
+.transition{
+  transition: opacity 1.5s ease-in;  
+}
+
+.transition.on {
+  opacity: 1;
+}
+
+.transition.off {
+  opacity: 0.01;
+}
+
+/* loading spinner */
+
+.loading-spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  opacity: 0.85;
+  text-align: center;
+  width: 2em;
+  height: 2em;
+  background-size: 100%;
+  /* http://b64.io/  */
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSIjZmY3ODhhIj4gIDxjaXJjbGUgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoOCAwKSIgY3g9IjAiIGN5PSIxNiIgcj0iMCI+ICAgICA8YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJyIiB2YWx1ZXM9IjA7IDQ7IDA7IDAiIGR1cj0iMS4ycyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIGJlZ2luPSIwIiAgICAgIGtleXRpbWVzPSIwOzAuMjswLjc7MSIga2V5U3BsaW5lcz0iMC4yIDAuMiAwLjQgMC44OzAuMiAwLjYgMC40IDAuODswLjIgMC42IDAuNCAwLjgiIGNhbGNNb2RlPSJzcGxpbmUiIC8+ICA8L2NpcmNsZT4gIDxjaXJjbGUgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTYgMCkiIGN4PSIwIiBjeT0iMTYiIHI9IjAiPiAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgdmFsdWVzPSIwOyA0OyAwOyAwIiBkdXI9IjEuMnMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiBiZWdpbj0iMC4zIiAgICAgIGtleXRpbWVzPSIwOzAuMjswLjc7MSIga2V5U3BsaW5lcz0iMC4yIDAuMiAwLjQgMC44OzAuMiAwLjYgMC40IDAuODswLjIgMC42IDAuNCAwLjgiIGNhbGNNb2RlPSJzcGxpbmUiIC8+ICA8L2NpcmNsZT4gIDxjaXJjbGUgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjQgMCkiIGN4PSIwIiBjeT0iMTYiIHI9IjAiPiAgICAgPGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgdmFsdWVzPSIwOyA0OyAwOyAwIiBkdXI9IjEuMnMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiBiZWdpbj0iMC42IiAgICAgIGtleXRpbWVzPSIwOzAuMjswLjc7MSIga2V5U3BsaW5lcz0iMC4yIDAuMiAwLjQgMC44OzAuMiAwLjYgMC40IDAuODswLjIgMC42IDAuNCAwLjgiIGNhbGNNb2RlPSJzcGxpbmUiIC8+ICA8L2NpcmNsZT48L3N2Zz4=);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.loading-spinner-size1{
+  width: 1em;
+  height: 1em;
+}
+.loading-spinner-size2{
+  width: 2em;
+  height: 2em;
+}
+.loading-spinner-size3{
+  width: 3em;
+  height: 3em;
+}
+.loading-spinner-size4{
+  width: 4em;
+  height: 4em;
+}
+.loading-spinner-size5{
+  width: 5em;
+  height: 5em;
+}
+.loading-spinner-size6{
+  width: 6em;
+  height: 6em;
+}
+
+/* media item */
+.media-item{
+	overflow: hidden !important;
+}
+.media-item .rate {
+	position: relative !important;
+	width: 100% !important;
+	z-index: 0 !important;
+	color: #fff;
+	background: #000;;
+}
+
+.media-item .rate4x3, .media-item .rate16x9, .media-item .fluid {
+	width: 100%;
+  max-width: 100%;
+  height: 0;
+}
+.media-item .rate4x3 {
+	padding-top: 75%;
+}
+
+.media-item .rate16x9 {
+	padding-top: 56.25%;
+	/*padding-top: 56.30%;*/
+}
+
+.media-item .fluid {
+  width: 100%;
+  height: 100%;
+}
+
+.media-item .size{
+	position: absolute !important;
+	top: 0px !important;
+	bottom: 0px !important;
+	left: 0px !important;
+	right: 0px !important;
+	height: 100% !important;
+	width: 100% !important;
+}
+.media-item .container {
+	width: 100%;
+	height: 100%;
+	position: relative !important;
+}
+/* for image */
+.media-item .backgroundImage{
+	width: 100%;height: 100%;
+	position: absolute !important;
+	background-position: 50% 50% !important;
+	background-repeat: no-repeat !important;
+	animation-name: fadeIn !important;
+	animation-duration: 300ms !important;
+	animation-timing-function: ease-out !important;
+	background-size: contain !important;
+	-webkit-animation-name: fadeIn !important;
+	-webkit-animation-duration: 300ms !important;
+	-webkit-animation-timing-function: ease-out !important;
+}
+
+.media-item video{
+	width: 100%;height: 100%;
+	position: absolute !important;
+}
+
+@-webkit-keyframes fadeIn{
+	0%{opacity:0}
+	100%{opacity:1}
+}
+
+@-moz-keyframes fadeIn {
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+	0%   { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@keyframes fadeIn{
+	0%{opacity:0}
+	100%{opacity:1}
+}
+
+@-webkit-keyframes zoomIn{
+	0%{
+		opacity:0;
+		-webkit-transform:scale3d(.3,.3,.3);
+		transform:scale3d(.3,.3,.3)
+	}
+	80%{opacity:1}
+}
+
+@-moz-keyframes zoomIn{
+	0%{
+		opacity:0;
+		-webkit-transform:scale3d(.3,.3,.3);
+		transform:scale3d(.3,.3,.3)
+	}
+	80%{opacity:1}
+}
+
+@-o-keyframes zoomIn{
+	0%{
+		opacity:0;
+		-webkit-transform:scale3d(.3,.3,.3);
+		transform:scale3d(.3,.3,.3)
+	}
+	80%{opacity:1}
+}
+
+@keyframes zoomIn{
+	0%{
+		opacity:0;
+		-webkit-transform:scale3d(.3,.3,.3);
+		transform:scale3d(.3,.3,.3)
+	}
+	80%{opacity:1}
+}
+
+/*
+	Because of ripple is used in onsen
+*/
+.wave{
+	position:relative;
+	overflow:hidden
+}
+.wave:after{
+	content:"";
+	display:block;
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	pointer-events:none;
+	background:rgba(255, 255, 255, 0.3);
+  border-radius: 100%;
+  -webkit-animation:ripple 0.65s linear;
+   -moz-animation:ripple 0.65s linear;
+    -ms-animation:ripple 0.65s linear;
+     -o-animation:ripple 0.65s linear;
+        animation:ripple 0.65s linear;
+}
+
+@-webkit-keyframes ripple {
+	0% { -webkit-transform:scale(0) }
+  100% {opacity: 0; -webkit-transform: scale(2.5);}
+}
+@-moz-keyframes ripple {
+	0% { -moz-transform:scale(0) }
+  100% {opacity: 0; -moz-transform: scale(2.5);}
+}
+@-o-keyframes ripple {
+	0% { -o-transform:scale(0) }
+  100% {opacity: 0; -o-transform: scale(2.5);}
+}
+@keyframes ripple {
+	0% { transform:scale(0) }
+  100% {opacity: 0; transform: scale(2.5);}
+}

@@ -1,0 +1,69 @@
+px2rem(a, b = unit(37.5, rem))
+  (a / b)
+
+.classifyPage
+  width: 100%
+  h1
+    font-size  18px
+    font-weight bold
+    text-align center
+    padding-top 12px
+  h2
+    font-size 14px
+    text-align center
+    padding-top 31px
+    color rgba(43, 44, 57, .5)
+
+.introduceContent {
+  width: 90%;
+  margin: auto;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.introduceButton
+  position fixed
+  bottom 0
+  // top px2rem(543)
+  // left 29.45%
+  width 100%
+  height 50px
+  line-height 50px
+  font-size 18px
+  text-align center
+  background-color #ff566d
+  color #fff
+  // border-radius px2rem(50)
+
+.select-list-box
+  padding-top 23px
+
+.listContainer
+  width 100%
+  height px2rem(450)
+  overflow-y scroll
+  margin  0 auto
+  font-size 0
+  // padding-top 23px
+  padding-left 25px
+  padding-right 25px
+  .active
+    color #FFF
+    border none
+    background-color #ff566d
+
+  li
+    display inline-block
+    width 30%
+    border 1px solid #adaaaa
+    height 30px
+    font-size 13px
+    text-align center
+    line-height 30px
+    text-overflow ellipsis
+    white-space nowrap
+    overflow hidden
+    margin-bottom 20px
+    border-radius 50px
+  li:not(:nth-child(3n+1))
+    margin-left 12.5px

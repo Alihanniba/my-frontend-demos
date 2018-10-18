@@ -24,15 +24,6 @@
 
 ![image](./Screenshot/wechatCard.jpg)
 
-
-<h3 id="guoweisu">经销系统未完成版 (2015-10)</h3>
-
-系统架构在laravel框架上,运用laravel5初步完成登陆注册及计算各个等级佣金部分
-
-![image](./Screenshot/jingxiao1.jpg)
-![image](./Screenshot/jingxiao2.jpg)
-![image](./Screenshot/jingxiao3.jpg)
-
 <h3 id="luMovie">撸电影手机网站 (2015-11)</h3>
 
 通过后台上传电影到七牛,获取链接信息,渲染页面,并判断终端是PC或手机做不同处理
